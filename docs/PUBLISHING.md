@@ -14,6 +14,8 @@ GitHub仓库：https://github.com/bjxj13c/QueST-Jittor。
 python -m pytest tests/test_numeric_comparator.py tests/test_sampling.py -q
 ```
 
+本次目录整理后再次运行上述5项检查，通过。新增的根目录训练与测试入口另检查了五条调度路径、帮助输出和无效参数拒绝行为；检查过程中没有导入模型、启动训练或仿真。所有已有Python模型及训练脚本的计算AST与整理前一致，修改限于注释和文件说明。
+
 完整模型参考测试还需要固定官方源码与对应数据。当前没有数据／权重公开下载地址，未验证干净Linux环境的完整端到端复跑；对外介绍时保留这些边界。
 
 ## 修改与开放

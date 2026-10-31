@@ -28,6 +28,7 @@ class PolicyDataset:
             for episode in self.chunks.episodes:
                 self.images[episode] = file[episode]["images"][:]
                 self.states[episode] = file[episode]["robot_states"][:].astype(np.float32)
+        # 标签缓存绑定数据和分词器权重；更换任意一项都不能复用旧标签。
         identity = {"framework": "jittor", "tokenizer_sha256": sha256(tokenizer_weights),
                     "dataset_sha256": manifest["sha256"], "split": split, "episodes": self.chunks.episodes,
                     "label_batch_size": batch_size}
@@ -41,6 +42,7 @@ class PolicyDataset:
                 self.labels = cache["labels"].copy()
         else:
             labels = []
+            # 固定分词器，用专家动作生成8个token标签；此处不更新分词器。
             tokenizer.eval()
             with jt.no_grad():
                 for start in range(0, len(self.chunks), batch_size):

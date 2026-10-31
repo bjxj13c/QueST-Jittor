@@ -46,6 +46,7 @@ class FSQ(nn.Module):
         shift = (offset / half).atanh()
         return (value + shift).tanh() * half - offset
 
+    # PyTorch参考量化流程：限幅、直通取整、缩放，与Jittor逐项核对。
     def quantize(self, value):
         return round_ste(self.bound(value)) / (self._levels // 2)
 
@@ -65,6 +66,7 @@ class FSQ(nn.Module):
         projected = self.project_in(value)
         if projected.dtype not in (torch.float32, torch.float64):
             projected = projected.float()
+        # 量化后的特征用于动作重建，离散编号用于训练条件策略。
         codes = self.quantize(projected)
         indices = self.codes_to_indices(codes)
         return self.project_out(codes.to(original_dtype)), indices

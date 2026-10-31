@@ -22,8 +22,13 @@
     },
     {
       "path": "README.md",
-      "bytes": 21793,
-      "sha256": "910854fbf70e4165cfc4b36cf0fbeedf21f87ff782ce036d0ac5f0d55a84ab67"
+      "bytes": 11405,
+      "sha256": "dec4ad3c1f60660f9e96b3f788c23153a9d9c1562c753745d047c521a5aae96b"
+    },
+    {
+      "path": "README_en.md",
+      "bytes": 7187,
+      "sha256": "ab897b705aebe7d6f3c338fa3b9c8b9e9bda5bda527483a645d2f0bd104b0d05"
     },
     {
       "path": "THIRD_PARTY_NOTICES.md",
@@ -31,9 +36,34 @@
       "sha256": "6ad40b1363bb23934a16649081fdd9414fc453733967f641f19ff8fa5016bcb7"
     },
     {
+      "path": "details.md",
+      "bytes": 6268,
+      "sha256": "e39926a8d4656cd3a13d72104a9a8c19ae3e8da982c47f993825acf9f37c6bdd"
+    },
+    {
+      "path": "docs/DATA.md",
+      "bytes": 2120,
+      "sha256": "0cb5a213d4260d24f72ec727c8de0f4db52d41636088cadb11a518851349de6e"
+    },
+    {
+      "path": "docs/EVALUATION.md",
+      "bytes": 2026,
+      "sha256": "b61be27e236fed6c89f525e7661a606e8957060fb3a0da51cc480ea3ee8288ea"
+    },
+    {
+      "path": "docs/EXPERIMENTS.md",
+      "bytes": 7009,
+      "sha256": "82c6754ec70f28e0a3647e3995cb10656820e7757f165c2ed8a855cab3dab33f"
+    },
+    {
       "path": "docs/EXPERIMENT_INDEX.md",
       "bytes": 2053,
       "sha256": "8abce058108ce480df1e705134370a5b1a41851a5830602dd58fcbc59a87401a"
+    },
+    {
+      "path": "docs/INSTALL.md",
+      "bytes": 1836,
+      "sha256": "1d277f5437a0904d202d25f7cd638db8636b78f1254283f53644d85de870bc3b"
     },
     {
       "path": "docs/LEARNING_ROUTE.md",
@@ -42,16 +72,26 @@
     },
     {
       "path": "docs/PUBLISHING.md",
-      "bytes": 1471,
-      "sha256": "36ccff30406b30ec29325c0bb41f9e576be0706ed51310fdec273bd67d6b9d28"
+      "bytes": 1816,
+      "sha256": "a67835619aae410c787f40608682b53df28e188dd5c62e80093b8d0f9510ed5b"
+    },
+    {
+      "path": "docs/README.md",
+      "bytes": 829,
+      "sha256": "3d91742fcb5e197457929badc39dbbcd5a71b9d29e6229d166d4d5f067cd3bf3"
     },
     {
       "path": "docs/REPRODUCTION_GUIDE.md",
-      "bytes": 11030,
-      "sha256": "1c7c15067cf371843a9666eb1047f205bbb50c4957e54a3277107ad2b9086ebc"
+      "bytes": 11093,
+      "sha256": "aa818d584616367e23a7bef8d3fc790245dc14ec192f7d8cebcb777206da9245"
     },
     {
-      "path": "docs/\u670d\u52a1\u5668\u9009\u62e9\u4e0e\u7b54\u8fa9\u8bf4\u660e.md",
+      "path": "docs/TRAINING.md",
+      "bytes": 4658,
+      "sha256": "0e619f682d90fac47f925fe86210926ae389b993e9a51d746f48229a40db9adc"
+    },
+    {
+      "path": "docs/服务器选择与答辩说明.md",
       "bytes": 2400,
       "sha256": "df5bcf7fb4dd7f156d1b6015bdf0a87c068818d055bc1d61340d39e138316094"
     },
@@ -89,6 +129,11 @@
       "path": "records/activation_grid_protocol_20261029.json",
       "bytes": 3256,
       "sha256": "7c01e8e4b211f05786fc8b5ff0a75090f51e432c82e1bb83540bdeb1d6e6559f"
+    },
+    {
+      "path": "records/decoder_precision_patch_20261030.json",
+      "bytes": 728,
+      "sha256": "be90d81901c1b2596ba67b8a0ea870fce75c93612242088ff6ba61dade891483"
     },
     {
       "path": "records/feedback_horizon_protocol_20261029.json",
@@ -791,6 +836,11 @@
       "sha256": "d50ef46a9b3ff9d0490776dcec941822b2a896254a1dad55c8f9b27fa43311f3"
     },
     {
+      "path": "requirements.txt",
+      "bytes": 131,
+      "sha256": "88cfe4bb65e4c576ac3c455b1aaf570e9efa38031f4dffbce4b7a22c1c662e90"
+    },
+    {
       "path": "requirements/cpu.txt",
       "bytes": 282,
       "sha256": "ec7f2ec37a6b33dd0442284a0da0be5267bb06604dca00191757d5c14057c345"
@@ -946,14 +996,19 @@
       "sha256": "ae961a176c3336dfe8175c1bbe95714bc1edf2129e8d341f7244705593f3d865"
     },
     {
+      "path": "scripts/entrypoints.py",
+      "bytes": 2336,
+      "sha256": "c0a8f316623e054155a6dcee7fad6e8b4b74466735ee482737374bcb16c2bbb9"
+    },
+    {
       "path": "scripts/evaluate_policy.py",
       "bytes": 9838,
       "sha256": "9d97c5c5def37394db2e63277545649f49a58453a19ede2149dc5f7216f57d04"
     },
     {
       "path": "scripts/evaluate_policy_jittor.py",
-      "bytes": 8028,
-      "sha256": "14e2b1ea2c5e2e4a986f8ee54a602b64fe447d2fa18abf1e5dd17f31cc44085c"
+      "bytes": 8031,
+      "sha256": "53a1ba90b1b97fa62f4fccf8e1b2ef70c6a2219d218de32d57eca1eaa960b6bb"
     },
     {
       "path": "scripts/evaluate_reach_holding.py",
@@ -1337,13 +1392,13 @@
     },
     {
       "path": "scripts/train_activation_policy.py",
-      "bytes": 11231,
-      "sha256": "d9bf7320bfe8db9fabc15aa49ab87a824339b36f08ed7362eb2ca15c45735266"
+      "bytes": 11942,
+      "sha256": "ce3a10fb46273a35f2916ed197fe686719fec5f201fc866aa9f3d8aba0d3c5bf"
     },
     {
       "path": "scripts/train_activation_tokenizer.py",
-      "bytes": 7116,
-      "sha256": "9711863a122a2e3ef942a1f68c810d77176ca751258f39b05fa789fcce06e21a"
+      "bytes": 7299,
+      "sha256": "e3f6983c22e65f69f31b701a7853c4e9479d9ae4580b1156de74e7d86f763f17"
     },
     {
       "path": "scripts/train_controlled_policy.py",
@@ -1432,8 +1487,8 @@
     },
     {
       "path": "src/quest_repro/batch_plan.py",
-      "bytes": 2467,
-      "sha256": "1aa8a9ae44fe8c4bcca7b6fb39291429752486ab634f363ffcdaa515b8f9fbb6"
+      "bytes": 2641,
+      "sha256": "27dd804f69c026db82ea517ac9b7ecd12b66759f04d96177fcb1ca8ec37b34f9"
     },
     {
       "path": "src/quest_repro/config.py",
@@ -1442,33 +1497,33 @@
     },
     {
       "path": "src/quest_repro/data.py",
-      "bytes": 3801,
-      "sha256": "45d80cbd3d131d1a02592a4314661e6bb1cc5c22eb0133b63ee9bae3375718d0"
+      "bytes": 4083,
+      "sha256": "450ae3fa835936f30730cd23002cf6693df0efcd603044c5086f6dbc79823fcc"
     },
     {
       "path": "src/quest_repro/jittor_training.py",
-      "bytes": 1238,
-      "sha256": "12c52025b1a2351b5204b49fa30a5fa336348f5d80cf7f09ff37396e459b5080"
+      "bytes": 1418,
+      "sha256": "01535b287a9af9a5c178683ff53ea8968ec526cbfef0ad02ec2ca798ae6d2b14"
     },
     {
       "path": "src/quest_repro/policy_data.py",
-      "bytes": 2848,
-      "sha256": "59035d44326ac14a4486dd41cfafd9f585f4320c52592681dfe95136307089e9"
+      "bytes": 3048,
+      "sha256": "46ad48584eb88ce3876f84a1ccb2a1496879a8e15b8c144d2a1a9662164b4451"
     },
     {
       "path": "src/quest_repro/policy_data_jittor.py",
-      "bytes": 3154,
-      "sha256": "93d6c9a5434aec79fa915585f120f0b9cc852a2ac3da994538fa826277942eb4"
+      "bytes": 3354,
+      "sha256": "4f8412b009fd500259bbe96e5103316c444bceb167cc610088c3aa61f3c699d0"
     },
     {
       "path": "src/quest_repro/policy_jittor.py",
-      "bytes": 9343,
-      "sha256": "d8f5c09424c03c6218804f81c40ba0141d37cfd61e0e41763068b821e7a92d2a"
+      "bytes": 10175,
+      "sha256": "c80fa1cc23621087b40e54c4edb4d74e48e606243068a8afb692225d2613d510"
     },
     {
       "path": "src/quest_repro/policy_torch.py",
-      "bytes": 8031,
-      "sha256": "75c8c82fd98a3775356f85fc2fe209a20470176ebf46eca7f96b82d033ef9563"
+      "bytes": 8216,
+      "sha256": "6e9041e2cb37326014aa49cec4e6c64a0da084c958d1a0ed468ee739ff09dd32"
     },
     {
       "path": "src/quest_repro/reference.py",
@@ -1482,23 +1537,28 @@
     },
     {
       "path": "src/quest_repro/simulation.py",
-      "bytes": 2695,
-      "sha256": "043f5b7914869453d3e4ca335963a22796ca86b22497b8f164f8d741e26e538d"
+      "bytes": 2875,
+      "sha256": "d033ed47d4034794fc2bbee32e1e073950d0fbe622080abb963722bef51c9da5"
     },
     {
       "path": "src/quest_repro/tokenizer_jittor.py",
-      "bytes": 14277,
-      "sha256": "5ac1e40069ed582c4118ec6d54982994a679024437cdd4e8e84029625315a56d"
+      "bytes": 15515,
+      "sha256": "884b55eeb4370cd405e74795229c58b10c6c035c02d87043f5e526eef66ad2b3"
     },
     {
       "path": "src/quest_repro/tokenizer_torch.py",
-      "bytes": 9136,
-      "sha256": "e665c7449f3a55b24770f86d828acdb117804b3861f47de331a5b00f14806133"
+      "bytes": 9317,
+      "sha256": "017b4353569670c42763f2f9560c87f218ced7f22d58e066498841a43f042450"
     },
     {
       "path": "src/quest_repro/training.py",
       "bytes": 4474,
       "sha256": "37215b642dec8030461373daa61b2c95871f372f8fc5be137fcc604bfd5dd20f"
+    },
+    {
+      "path": "test_jittor.py",
+      "bytes": 176,
+      "sha256": "e102642062da10a2fe1c9bb140b70b65662637a78223da2c874192055cc36977"
     },
     {
       "path": "tests/conftest.py",
@@ -1534,7 +1594,21 @@
       "path": "tests/test_tokenizer_reference.py",
       "bytes": 4570,
       "sha256": "c2b1994959a97645424e04ffc2b3fd31895e254a1f2ff7e0cb39cd8e54134e95"
+    },
+    {
+      "path": "train_jittor.py",
+      "bytes": 147,
+      "sha256": "5f501e3fad97e5f873a780e5c2192606620843cc006cd337355171aa29ea5c11"
+    },
+    {
+      "path": "train_pytorch.py",
+      "bytes": 138,
+      "sha256": "0c22140ab393536c52e67a1382c793d9d628a2e091a9e3cb453c239f3d0cfc9a"
     }
   ],
-  "scope": "Canonical staged Git payload; manifest excludes itself; full data/weights and local operational files excluded"
+  "scope": "Tracked source, documentation and original lightweight evidence; manifest excludes itself; data, large weights and local session files excluded",
+  "layout_reference": {
+    "repository": "https://github.com/Yuyciciccc/DMANet-Jittor",
+    "readme_blob": "6b73e503e0a595ec8fc3e45bbc3455b66c5c041c"
+  }
 }

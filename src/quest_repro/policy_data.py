@@ -29,6 +29,7 @@ class PolicyDataset:
             for episode in self.chunks.episodes:
                 self.images[episode] = file[episode]["images"][:]
                 self.states[episode] = file[episode]["robot_states"][:].astype(np.float32)
+        # 标签缓存绑定数据和分词器权重；更换任意一项都不能复用旧标签。
         identity = {"tokenizer_sha256": sha256(tokenizer_path), "dataset_sha256": manifest["sha256"],
                     "split": split, "episodes": self.chunks.episodes, "windows": len(self.chunks),
                     "label_batch_size": batch_size}
@@ -41,6 +42,7 @@ class PolicyDataset:
                     raise ValueError("Label cache identity mismatch")
                 self.labels = cache["labels"].copy()
         else:
+            # 固定分词器，用专家动作生成8个token标签；此处不更新分词器。
             tokenizer.eval()
             labels = []
             with torch.no_grad():

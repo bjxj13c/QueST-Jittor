@@ -1,0 +1,3 @@
+# Native Jittor training and MetaWorld evaluation. Python 3.10 on Linux.
+-r requirements/jittor.txt
+-r requirements/simulation.txt

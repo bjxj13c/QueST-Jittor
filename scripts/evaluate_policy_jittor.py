@@ -1,4 +1,4 @@
-"""Native Jittor closed-loop evaluator; Linux runtime verification pending.
+"""Native Jittor closed-loop evaluator for the recorded MetaWorld experiments.
 
 Consumes weights/config emitted by train_policy_jittor.py. No Torch import.
 Use development seeds first. Only run final seeds after freezing the protocol.

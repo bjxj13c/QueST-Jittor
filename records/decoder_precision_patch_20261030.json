@@ -1,0 +1,18 @@
+{
+  "registered_utc": "2026-10-30T10:33:15.169100+00:00",
+  "reason": "new clone original FP32 recheck has2action mismatches,max3.2007694e-5;context passes,tokens exact",
+  "candidate": "decoder LayerNorm mean/variance/affine FP64 accumulation then FP32output;onlyfrozenJittordecoder12norms",
+  "unchanged": [
+    "trainedweights",
+    "normalizationequation",
+    "FSQ",
+    "activations",
+    "policy",
+    "input/outputdtype",
+    "seedsets",
+    "atol2e-5",
+    "rtol2e-4"
+  ],
+  "acceptance": "same200validationinputs,samenativeweights,all1600tokens exact,originalpairwiseallclose;noevaluationif fails",
+  "scope": "numericimplementationrepair,notretraining;original failures retained;instrumentedtracesnotacceptancegate"
+}

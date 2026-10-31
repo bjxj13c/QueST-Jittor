@@ -19,6 +19,7 @@ def create_plan(root, output, epochs, batch_size, seed):
     if epochs <= 0 or batch_size <= 0:
         raise ValueError("Positive epoch and batch size required")
     count = len(ActionChunkDataset(root))
+    # 先生成与框架无关的样本顺序，让配对训练读取相同批次。
     rng = np.random.default_rng(seed)
     metadata = {"split_fingerprint": split_fingerprint(root), "windows": count,
                 "epochs": epochs, "batch_size": batch_size, "seed": seed,
@@ -32,6 +33,7 @@ def create_plan(root, output, epochs, batch_size, seed):
 def load_plan(path, root, epochs, batch_size):
     with np.load(path, allow_pickle=False) as archive:
         metadata = json.loads(str(archive["metadata"]))
+        # 加载前核对数据划分，防止将旧批次计划用于另一份数据。
         if metadata["split_fingerprint"] != split_fingerprint(root):
             raise ValueError("Batch plan belongs to another dataset/split")
         if metadata["epochs"] != epochs or metadata["batch_size"] != batch_size:

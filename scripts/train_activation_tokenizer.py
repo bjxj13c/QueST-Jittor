@@ -66,6 +66,7 @@ def main():
                 opt.lr=float(lr);e=(prediction(x)-jt.array(x)).abs();loss=(e*jt.array(mask)).sum()/(float(mask.sum())*4) if a.masked else e.mean();value=float(np.asarray(loss.numpy()).reshape(-1)[0]);opt.zero_grad();opt.backward(loss)
                 normsquared=[(g*g).sum() for group in opt.param_groups for v,g in zip(group['params'],group['grads']) if not v.is_stop_grad()];norm=float(np.asarray(jt.sqrt(sum(normsquared)).numpy()).reshape(-1)[0]);
                 if not np.isfinite(value) or not np.isfinite(norm):raise FloatingPointError('Nonfinite native loss/gradient before update')
+                # 检查通过后裁剪梯度并更新分词器；裁剪前范数另存日志。
                 opt.clip_grad_norm(100);opt.step()
             if not np.isfinite(value) or not np.isfinite(norm):raise FloatingPointError('Nonfinite tokenizer loss/gradient')
             norms.append(norm);log.write(json.dumps({'step':step,'loss':value,'gradient_norm':norm})+'\n')
@@ -73,6 +74,7 @@ def main():
             if step%a.eval_every==0 or step==a.updates:
                 scores=evaluate();print(json.dumps({'step':step,**scores}),flush=True)
                 with (a.output/'metrics.jsonl').open('a') as f:f.write(json.dumps({'step':step,**scores})+'\n')
+                # 按验证集重建MAE选择检查点；mae_all包含补齐位置。
                 if scores['mae_all']<best:best=scores['mae_all'];save();(a.output/'best_validation.json').write_text(json.dumps({'step':step,**scores}))
     result={'status':'completed','updates':a.updates,'best_validation_mae':best,'batch_stream_sha256':stream.hexdigest(),'max_gradient_norm':max(norms),'finite':True,'torch_imported':'torch' in sys.modules,'elapsed_seconds':time.monotonic()-started}
     (a.output/'summary.json').write_text(json.dumps(result,indent=2));print(json.dumps(result),flush=True)

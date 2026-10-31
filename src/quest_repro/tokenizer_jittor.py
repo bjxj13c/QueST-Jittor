@@ -22,6 +22,7 @@ def round_ties_even(value):
 
 
 def round_ste(value):
+    # 前向取整，反向保留对value的梯度；取整规则与PyTorch一致。
     return value + (round_ties_even(value) - value).stop_grad()
 
 
@@ -34,6 +35,7 @@ class FSQ(jt.Module):
         self.project_in = nn.Linear(dim, len(levels)) if dim != len(levels) else nn.Identity()
         self.project_out = nn.Linear(len(levels), dim) if dim != len(levels) else nn.Identity()
 
+    # 用tanh将每一维限制到对应档位的范围，偶数档位需要半格偏移。
     def bound(self, value, eps=1e-3):
         half = (self._levels - 1).float32() * ((1 + eps) / 2)
         offset = jt.where(self._levels % 2 == 0, jt.ones_like(half) * 0.5, jt.zeros_like(half))
@@ -41,9 +43,11 @@ class FSQ(jt.Module):
         shift = 0.5 * ((1 + ratio) / (1 - ratio)).log()
         return (value + shift).tanh() * half - offset
 
+    # 先限幅、再取整，最后缩放为解码器使用的量化数值。
     def quantize(self, value):
         return round_ste(self.bound(value)) / (self._levels // 2).float32()
 
+    # 按各维的档位数计算混合进制编号；[8,5,5,5]共有1000种组合。
     def codes_to_indices(self, codes):
         half = (self._levels // 2).float32()
         digits = codes * half + half
@@ -58,7 +62,9 @@ class FSQ(jt.Module):
         return self.project_out(self._indices_to_codes(indices))
 
     def execute(self, value):
+        # 将256维动作特征投影到4维，并分别量化到固定档位。
         codes = self.quantize(self.project_in(value))
+        # 同时返回解码器使用的特征，以及策略训练使用的token编号。
         return self.project_out(codes), self.codes_to_indices(codes)
 
 
@@ -109,6 +115,7 @@ class GroupNorm(jt.Module):
         return normalized.reshape(shape) * self.weight.reshape(affine_shape) + self.bias.reshape(affine_shape)
 
 
+# 上三角设为负无穷，softmax后未来位置的权重为0。
 def causal_mask(length):
     mask = np.where(np.triu(np.ones((length, length), dtype=bool), 1), -np.inf, 0).astype(np.float32)
     return jt.array(mask).stop_grad()
@@ -124,17 +131,23 @@ class MultiheadAttention(jt.Module):
 
     def execute(self, query, key, value, mask=None):
         d = self.dim
+        # 分别计算Q、K、V。自注意力时，三者来自同一段动作特征。
         q = nn.linear(query, self.in_proj_weight[:d], self.in_proj_bias[:d])
         k = nn.linear(key, self.in_proj_weight[d:2*d], self.in_proj_bias[d:2*d])
         v = nn.linear(value, self.in_proj_weight[2*d:], self.in_proj_bias[2*d:])
+        # 拆分多头：[B,L,256]变为[B,4,L,64]，各个头并行计算。
         batch, length = q.shape[:2]
         q = q.reshape((batch, length, self.heads, self.head_dim)).transpose(0, 2, 1, 3)
         k = k.reshape((batch, k.shape[1], self.heads, self.head_dim)).transpose(0, 2, 1, 3)
         v = v.reshape((batch, v.shape[1], self.heads, self.head_dim)).transpose(0, 2, 1, 3)
+        # 计算缩放点积；scores的最后两维表示查询位置和被关注位置。
         scores = jt.matmul(q * (self.head_dim ** -0.5), k.transpose(0, 1, 3, 2))
+        # 加上因果掩码，禁止当前位置读取未来的信息。
         if mask is not None:
             scores = scores + mask
+        # 沿被关注的位置做softmax，再对V加权求和。
         probabilities = self.attention_dropout(nn.softmax(scores, dim=-1))
+        # 合并各个头，还原[B,L,256]，最后通过输出投影。
         output = jt.matmul(probabilities, v).transpose(0, 2, 1, 3).reshape((batch, length, d))
         return self.out_proj(output)
 
@@ -254,11 +267,13 @@ class SkillVAE(jt.Module):
         self.add_positional_emb = Summer(PositionalEncoding1D(c.encoder_dim))
         self.fixed_positional_emb = PositionalEncoding1D(c.decoder_dim)
 
+    # 动作先投影、时间下采样，再经因果Transformer编码；32步压缩为8个位置。
     def encode(self, actions):
         value = self.add_positional_emb(self.conv_block(self.action_proj(actions)))
         mask = causal_mask(value.shape[1]) if self.config.use_causal_encoder else None
         return self.encoder(value, mask)
 
+    # 用32个带位置信息的查询，从量化特征中重建32步动作。
     def decode(self, codes):
         queries = self.fixed_positional_emb(jt.zeros((codes.shape[0], self.skill_block_size, self.decoder_dim)))
         mask = causal_mask(queries.shape[1]) if self.config.use_causal_decoder else None

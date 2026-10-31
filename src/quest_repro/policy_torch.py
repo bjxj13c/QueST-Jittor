@@ -140,6 +140,7 @@ class QueSTPolicy(nn.Module):
             raise TypeError("Policy requires raw uint8 RGB: normalize exactly once inside the policy")
         if robot_states.shape[-1] != 8:
             raise ValueError("Policy receives 8-D robot state; privileged 39-D state is forbidden")
+        # 图像和机器人状态分别编码，再与任务token组成条件上下文。
         batch, time = images.shape[:2]
         visual = self.image_encoders["corner_rgb"](
             images.float().div(255).reshape(batch * time, *images.shape[2:])).reshape(batch, time, -1)
@@ -150,6 +151,7 @@ class QueSTPolicy(nn.Module):
     def forward(self, images, robot_states, task_id, targets):
         context = self.get_context(images, robot_states, task_id)
         start = torch.full((len(targets), 1), self.config.vocab_size, dtype=torch.long, device=targets.device)
+        # 教师强制训练：输入专家序列的前缀，监督下一个位置的token。
         inputs = torch.cat((start, targets[:, :-1]), dim=1)
         logits = self.policy_prior(inputs, context)
         return logits, F.cross_entropy(logits.reshape(-1, self.config.vocab_size), targets.reshape(-1))

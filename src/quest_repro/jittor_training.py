@@ -11,6 +11,7 @@ def owner_module(model, path):
 
 
 def optimizer_groups(model, weight_decay=1e-4):
+    # 将偏置、归一化和嵌入等参数与需要权重衰减的矩阵分开。
     decay, no_decay = [], []
     for name, parameter in model.named_parameters():
         if parameter.is_stop_grad():
@@ -24,6 +25,7 @@ def optimizer_groups(model, weight_decay=1e-4):
 
 def save_npz(model, path):
     import numpy as np
+    # 导出静态数组，方便跨框架检查；不在原生Jittor模型中执行PyTorch。
     values = {name: value.numpy() for name, value in model.state_dict().items()}
     for name in values:
         if name.endswith("num_batches_tracked"):

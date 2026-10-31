@@ -14,6 +14,7 @@ import numpy as np
 def load_manifest(root, verify_hash=False):
     root = Path(root)
     manifest = json.loads((root / "records/reach_split_v1.json").read_text(encoding="utf-8"))
+    # 按完整轨迹划分，检查训练与验证集合没有同一条轨迹。
     if set(manifest["train"]) & set(manifest["validation"]):
         raise ValueError("Train/validation episode overlap")
     if verify_hash:
@@ -52,8 +53,10 @@ class ActionChunkDataset:
         episode, start = self.index[index]
         actions = self.actions[episode][start:start + self.chunk_length].copy()
         valid = len(actions)
+        # 仅在当前轨迹内部截取动作，末尾不足32步时重复最后一个动作。
         if valid < self.chunk_length:
             actions = np.pad(actions, ((0, self.chunk_length - valid), (0, 0)), mode="edge")
+        # pad_mask标记真实动作位置；是否将补齐位置计入损失由训练配置决定。
         result = {"actions": actions, "pad_mask": (np.arange(self.chunk_length) < valid)[:, None],
                   "episode": episode, "start": np.int64(start), "task_id": np.int64(self.task_ids.get(episode,0))}
         if self.include_observations:

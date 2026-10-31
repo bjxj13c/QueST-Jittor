@@ -1,4 +1,4 @@
-"""Native Jittor single-task QueST policy port; runtime validation pending.
+"""Native Jittor QueST policy with image, robot-state and task-ID conditions.
 
 No Torch imports. A Torch fixture provides only static NPZ weights/reference
 arrays. See reports for measured status before describing numerical alignment.
@@ -41,6 +41,7 @@ class BatchNorm2d(jt.Module):
             mean = value.mean(dims=[0, 2, 3])
             variance = ((value - mean.reshape(shape)) ** 2).mean(dims=[0, 2, 3])
             self.running_mean.update(self.running_mean * (1 - self.momentum) + mean.detach() * self.momentum)
+            # 运行方差采用PyTorch相同的无偏估计，便于共享权重对照。
             self.running_var.update(self.running_var * (1 - self.momentum) +
                                     variance.detach() * (count / (count - 1)) * self.momentum)
             self.num_batches_tracked.update(self.num_batches_tracked + 1)
@@ -136,6 +137,7 @@ class SkillGPT(jt.Module):
     def execute(self, indices, context):
         value = self.add_positional_emb(self.tok_emb(indices))
         value = self.drop(jt.concat((context, value), dim=1))
+        # 任务、观察与已有token共同作为上下文，因果掩码限制可见范围。
         value = self.decoder(value, causal_mask(value.shape[1]))
         return self.head(self.lnf(value[:, context.shape[1]:]))
 
@@ -147,6 +149,7 @@ class SkillGPT(jt.Module):
             indices = jt.concat((indices, next_token.unsqueeze(-1)), dim=1)
         return indices[:, 1:]
 
+    # 每次生成一个token，加入序列后继续预测，直到得到8个token。
     def generate_sampled(self,context,top_k=5,temperature=1.0,rng=None):
         from .sampling import sample_top_k
         if top_k==1:return self.generate_greedy(context)
@@ -171,16 +174,23 @@ class QueSTPolicy(jt.Module):
     def get_context(self, images, robot_states, task_id):
         if str(images.dtype) != "uint8" or robot_states.shape[-1] != 8:
             raise ValueError("Expected raw uint8 RGB and 8-D robot state")
+        # B为批量大小，T为观察帧数；本次配置T=1。
         batch, time = images.shape[:2]
+        # 原始RGB是uint8；只在模型入口除以255，提取每帧的256维视觉特征。
         visual = self.image_encoders["corner_rgb"]((images.float32() / 255).reshape((-1, *images.shape[2:])))
+        # 8维机器人状态编码为128维特征。
         state = self.lowdim_encoders["robot_states"](robot_states.float32())
+        # 拼接视觉和状态特征，并投影为384维观察特征。
         observation = self.obs_proj(jt.concat((visual.reshape((batch, time, -1)), state), dim=-1))
+        # 任务ID映射为384维任务token；单帧时上下文形状为[B,2,384]。
         return jt.concat((self.task_encoder(task_id).unsqueeze(1), observation), dim=1)
 
     def execute(self, images, robot_states, task_id, targets):
         context = self.get_context(images, robot_states, task_id)
         start = jt.full((len(targets), 1), self.config.vocab_size, dtype="int32")
+        # 训练时用起始符和前面的专家token，预测下一个token。
         indices = jt.concat((start, targets[:, :-1]), dim=1)
         logits = self.policy_prior(indices, context)
+        # 将每个位置视作1000类分类，交叉熵监督目标是专家动作的token。
         loss = nn.cross_entropy_loss(logits.reshape((-1, self.config.vocab_size)), targets.reshape((-1,)))
         return logits, loss

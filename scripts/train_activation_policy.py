@@ -99,6 +99,7 @@ def main():
     metadata['label_audit']=label_audit
     (args.output/'config.json').write_text(json.dumps(metadata,indent=2))
     initial=evaluate_current();(args.output/'initial_validation.json').write_text(json.dumps(initial,indent=2))
+    # 样本顺序和增强分别使用固定随机流，便于两框架配对训练。
     order_rng=np.random.default_rng(args.seed);aug_rng=np.random.default_rng(args.seed+1)
     order=order_rng.permutation(len(datasets['train']));cursor=0;plan_hash=hashlib.sha256()
     best=float('inf');best_step=0;norms=[];loss_sum=0.;interval_steps=0;started=time.monotonic();step=0
@@ -124,13 +125,19 @@ def main():
                 if not np.isfinite(norm) or not np.isfinite(value):raise FloatingPointError('Nonfinite loss/gradient')
                 opt.step()
             else:
+                # 以下为Jittor原生训练分支；从NumPy批次构造Jittor变量。
                 opt.lr=lr
                 images,state,task,targets=[jt.array(batch[k]) for k in ('images','robot_states','task_id','targets')]
+                # 前向计算token交叉熵；task和targets使用整数索引。
                 _,loss=model(images,state,task.int32(),targets.int32());value=float(loss.numpy())
+                # 清空上一批梯度，再根据当前损失反向传播。
                 opt.zero_grad();opt.backward(loss)
+                # 汇总所有可训练参数的梯度，记录裁剪前的全局范数。
                 squared=[(g*g).sum() for group in opt.param_groups for p,g in zip(group['params'],group['grads']) if not p.is_stop_grad()]
                 norm=float(jt.sqrt(sum(squared)).numpy())
+                # 损失或梯度出现NaN/Inf时立即停止，不保存异常更新。
                 if not np.isfinite(norm) or not np.isfinite(value):raise FloatingPointError('Nonfinite native loss/gradient')
+                # 梯度范数超过100时整体缩放，再由优化器更新参数。
                 opt.clip_grad_norm(100.);opt.step()
             norms.append(norm);loss_sum+=value;interval_steps+=1
             gradfile.write(json.dumps({'step':step,'preclip_norm':norm,'clipped':norm>100})+'\n')
@@ -140,6 +147,7 @@ def main():
                 row={'step':step,'train_ce':loss_sum/interval_steps,**metrics,'lr':lr,'grad_norm_max_interval':max(norms[-interval_steps:]),'elapsed_seconds':time.monotonic()-started}
                 writer.writerow(row);file.flush();print(json.dumps(row),flush=True)
                 with (args.output/'metrics.jsonl').open('a') as logs:logs.write(json.dumps(row)+'\n')
+                # 按验证集交叉熵保存最佳策略，不根据测试场景成功率挑模型。
                 if metrics['validation_ce']<best:
                     best=metrics['validation_ce'];best_step=step;save_weights('best')
                     (args.output/'best_validation.json').write_text(json.dumps({'step':step,**metrics},indent=2))
