@@ -1,0 +1,120 @@
+{
+  "scope": "same native-trained frozen tokenizer, full policies from same initial NPZ, paired20epoch training, development only",
+  "runs": {
+    "torch": {
+      "epochs": 20,
+      "best_epoch_by_validation_ce": 7,
+      "best_validation_ce": 1.3235121925405209,
+      "best_checkpoint_autoregressive_action_mae": 0.034948555615124284,
+      "final_train_ce": 0.1830308620824295,
+      "final_validation_ce": 1.7644959136143628,
+      "training_elapsed_seconds": 95.67234384454787,
+      "development_successes": 2,
+      "development_episodes": 5,
+      "development_success_rate": 0.4,
+      "wilson_95_interval": [
+        0.11762077423264783,
+        0.769275718723987
+      ],
+      "development_episode_records": [
+        {
+          "seed": 2000,
+          "steps": 33,
+          "success": true,
+          "return": 188.27290436263286,
+          "actions_requiring_clip": 7
+        },
+        {
+          "seed": 2001,
+          "steps": 150,
+          "success": false,
+          "return": 910.0497802381832,
+          "actions_requiring_clip": 6
+        },
+        {
+          "seed": 2002,
+          "steps": 150,
+          "success": false,
+          "return": 1117.423681374725,
+          "actions_requiring_clip": 5
+        },
+        {
+          "seed": 2003,
+          "steps": 56,
+          "success": true,
+          "return": 367.39689451461516,
+          "actions_requiring_clip": 12
+        },
+        {
+          "seed": 2004,
+          "steps": 150,
+          "success": false,
+          "return": 1270.901326915402,
+          "actions_requiring_clip": 13
+        }
+      ]
+    },
+    "jittor": {
+      "epochs": 20,
+      "best_epoch_by_validation_ce": 4,
+      "best_validation_ce": 1.2766186038919742,
+      "best_checkpoint_autoregressive_action_mae": 0.054991701124011846,
+      "final_train_ce": 0.18446429459010663,
+      "final_validation_ce": 1.7354069244141546,
+      "training_elapsed_seconds": 162.69104797020555,
+      "development_successes": 1,
+      "development_episodes": 5,
+      "development_success_rate": 0.2,
+      "wilson_95_interval": [
+        0.03622410863243014,
+        0.6244653702374747
+      ],
+      "development_episode_records": [
+        {
+          "seed": 2000,
+          "steps": 30,
+          "success": true,
+          "return": 160.4160605525618,
+          "actions_requiring_clip": 6
+        },
+        {
+          "seed": 2001,
+          "steps": 150,
+          "success": false,
+          "return": 816.6608562111584,
+          "actions_requiring_clip": 11
+        },
+        {
+          "seed": 2002,
+          "steps": 150,
+          "success": false,
+          "return": 748.2468534054827,
+          "actions_requiring_clip": 11
+        },
+        {
+          "seed": 2003,
+          "steps": 150,
+          "success": false,
+          "return": 930.5799101574486,
+          "actions_requiring_clip": 11
+        },
+        {
+          "seed": 2004,
+          "steps": 150,
+          "success": false,
+          "return": 956.1533313776308,
+          "actions_requiring_clip": 6
+        }
+      ]
+    }
+  },
+  "batch_plan_sha256": "8543f18b77e9b9893bcffbc6ed5862a7a3c5863bf13b1a8515b610d315ea467a",
+  "final_seeds_used": false,
+  "limitations": [
+    "five development seeds; not a statistical framework ranking",
+    "single task and 30 demonstrations",
+    "best checkpoint selected by validation CE, not development success",
+    "training curves are not identical parameter trajectories",
+    "final reserved test, publication and presentation delivery remain pending"
+  ]
+}

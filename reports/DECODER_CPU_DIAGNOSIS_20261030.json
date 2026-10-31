@@ -1,0 +1,42 @@
+{
+  "status": "diagnostic_completed_cpu_only",
+  "original_gpu_gate_still_failed": true,
+  "original_atol": 2e-05,
+  "original_rtol": 0.0002,
+  "all1600_tokens_exact": true,
+  "failed_index": [
+    130,
+    11,
+    2
+  ],
+  "original_absolute_difference": 3.121793270111084e-05,
+  "original_allowed_error": 3.0156020522117616e-05,
+  "fp64_at_failed_point": 0.05075616933127518,
+  "comparisons": {
+    "torch_gpu": {
+      "max_error_vs_fp64": 7.2846533882148234e-06,
+      "mean_error_vs_fp64": 1.081897414392557e-07,
+      "at_original_failed_point": 0.05074888467788696,
+      "error_at_original_failed_point": 7.2846533882148234e-06
+    },
+    "jittor_gpu": {
+      "max_error_vs_fp64": 2.3933279312896016e-05,
+      "mean_error_vs_fp64": 1.2628999945367254e-07,
+      "at_original_failed_point": 0.050780102610588074,
+      "error_at_original_failed_point": 2.3933279312896016e-05
+    },
+    "torch_cpu_fp32": {
+      "max_error_vs_fp64": 3.22972409672051e-06,
+      "mean_error_vs_fp64": 1.1348518042635706e-07,
+      "at_original_failed_point": 0.05075746029615402,
+      "error_at_original_failed_point": 1.2909648788445027e-06
+    }
+  },
+  "weights_sha256": "ba4c49d09fee27b0d003b6acc7c2eae610331e71d6dca86a65068208594b541e",
+  "scope": "same learned native tokenizer weights,fixed common tokens;decode stage only;no training or GPU execution",
+  "limitations": [
+    "FP64 reference preserves CPU-computed FP32 positional constants;not a proof of exact GPU kernel origin",
+    "does not replace original GPU alignment gate",
+    "missing unit still requires approved compatible GPU evaluation after diagnosis"
+  ]
+}

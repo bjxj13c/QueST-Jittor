@@ -1,0 +1,810 @@
+{
+  "framework": "torch",
+  "dataset_sha256": "c899d5923933b57a8957fe20a48554756987f8ab72ae772f8b2adb1f3454fab9",
+  "top_k": 1,
+  "sampling": "common NumPy uniform draws for this fixture;not Torch deployment RNG equality",
+  "samples": [
+    {
+      "episode": "demo_44",
+      "start": 0
+    },
+    {
+      "episode": "demo_44",
+      "start": 1
+    },
+    {
+      "episode": "demo_94",
+      "start": 0
+    },
+    {
+      "episode": "demo_94",
+      "start": 1
+    },
+    {
+      "episode": "demo_12",
+      "start": 0
+    },
+    {
+      "episode": "demo_12",
+      "start": 1
+    },
+    {
+      "episode": "demo_62",
+      "start": 0
+    },
+    {
+      "episode": "demo_62",
+      "start": 1
+    },
+    {
+      "episode": "demo_20",
+      "start": 0
+    },
+    {
+      "episode": "demo_20",
+      "start": 1
+    },
+    {
+      "episode": "demo_70",
+      "start": 0
+    },
+    {
+      "episode": "demo_70",
+      "start": 1
+    },
+    {
+      "episode": "demo_47",
+      "start": 0
+    },
+    {
+      "episode": "demo_47",
+      "start": 1
+    },
+    {
+      "episode": "demo_97",
+      "start": 0
+    },
+    {
+      "episode": "demo_97",
+      "start": 1
+    },
+    {
+      "episode": "demo_14",
+      "start": 0
+    },
+    {
+      "episode": "demo_14",
+      "start": 1
+    },
+    {
+      "episode": "demo_64",
+      "start": 0
+    },
+    {
+      "episode": "demo_64",
+      "start": 1
+    },
+    {
+      "episode": "demo_35",
+      "start": 0
+    },
+    {
+      "episode": "demo_35",
+      "start": 1
+    },
+    {
+      "episode": "demo_85",
+      "start": 0
+    },
+    {
+      "episode": "demo_85",
+      "start": 1
+    },
+    {
+      "episode": "demo_11",
+      "start": 0
+    },
+    {
+      "episode": "demo_11",
+      "start": 1
+    },
+    {
+      "episode": "demo_61",
+      "start": 0
+    },
+    {
+      "episode": "demo_61",
+      "start": 1
+    },
+    {
+      "episode": "demo_3",
+      "start": 0
+    },
+    {
+      "episode": "demo_3",
+      "start": 1
+    },
+    {
+      "episode": "demo_53",
+      "start": 0
+    },
+    {
+      "episode": "demo_53",
+      "start": 1
+    },
+    {
+      "episode": "demo_13",
+      "start": 0
+    },
+    {
+      "episode": "demo_13",
+      "start": 1
+    },
+    {
+      "episode": "demo_63",
+      "start": 0
+    },
+    {
+      "episode": "demo_63",
+      "start": 1
+    },
+    {
+      "episode": "demo_0",
+      "start": 0
+    },
+    {
+      "episode": "demo_0",
+      "start": 1
+    },
+    {
+      "episode": "demo_50",
+      "start": 0
+    },
+    {
+      "episode": "demo_50",
+      "start": 1
+    },
+    {
+      "episode": "demo_121",
+      "start": 0
+    },
+    {
+      "episode": "demo_121",
+      "start": 1
+    },
+    {
+      "episode": "demo_171",
+      "start": 0
+    },
+    {
+      "episode": "demo_171",
+      "start": 1
+    },
+    {
+      "episode": "demo_128",
+      "start": 0
+    },
+    {
+      "episode": "demo_128",
+      "start": 1
+    },
+    {
+      "episode": "demo_178",
+      "start": 0
+    },
+    {
+      "episode": "demo_178",
+      "start": 1
+    },
+    {
+      "episode": "demo_138",
+      "start": 0
+    },
+    {
+      "episode": "demo_138",
+      "start": 1
+    },
+    {
+      "episode": "demo_188",
+      "start": 0
+    },
+    {
+      "episode": "demo_188",
+      "start": 1
+    },
+    {
+      "episode": "demo_113",
+      "start": 0
+    },
+    {
+      "episode": "demo_113",
+      "start": 1
+    },
+    {
+      "episode": "demo_163",
+      "start": 0
+    },
+    {
+      "episode": "demo_163",
+      "start": 1
+    },
+    {
+      "episode": "demo_144",
+      "start": 0
+    },
+    {
+      "episode": "demo_144",
+      "start": 1
+    },
+    {
+      "episode": "demo_194",
+      "start": 0
+    },
+    {
+      "episode": "demo_194",
+      "start": 1
+    },
+    {
+      "episode": "demo_146",
+      "start": 0
+    },
+    {
+      "episode": "demo_146",
+      "start": 1
+    },
+    {
+      "episode": "demo_196",
+      "start": 0
+    },
+    {
+      "episode": "demo_196",
+      "start": 1
+    },
+    {
+      "episode": "demo_100",
+      "start": 0
+    },
+    {
+      "episode": "demo_100",
+      "start": 1
+    },
+    {
+      "episode": "demo_150",
+      "start": 0
+    },
+    {
+      "episode": "demo_150",
+      "start": 1
+    },
+    {
+      "episode": "demo_130",
+      "start": 0
+    },
+    {
+      "episode": "demo_130",
+      "start": 1
+    },
+    {
+      "episode": "demo_180",
+      "start": 0
+    },
+    {
+      "episode": "demo_180",
+      "start": 1
+    },
+    {
+      "episode": "demo_103",
+      "start": 0
+    },
+    {
+      "episode": "demo_103",
+      "start": 1
+    },
+    {
+      "episode": "demo_153",
+      "start": 0
+    },
+    {
+      "episode": "demo_153",
+      "start": 1
+    },
+    {
+      "episode": "demo_147",
+      "start": 0
+    },
+    {
+      "episode": "demo_147",
+      "start": 1
+    },
+    {
+      "episode": "demo_197",
+      "start": 0
+    },
+    {
+      "episode": "demo_197",
+      "start": 1
+    },
+    {
+      "episode": "demo_245",
+      "start": 0
+    },
+    {
+      "episode": "demo_245",
+      "start": 1
+    },
+    {
+      "episode": "demo_295",
+      "start": 0
+    },
+    {
+      "episode": "demo_295",
+      "start": 1
+    },
+    {
+      "episode": "demo_215",
+      "start": 0
+    },
+    {
+      "episode": "demo_215",
+      "start": 1
+    },
+    {
+      "episode": "demo_265",
+      "start": 0
+    },
+    {
+      "episode": "demo_265",
+      "start": 1
+    },
+    {
+      "episode": "demo_233",
+      "start": 0
+    },
+    {
+      "episode": "demo_233",
+      "start": 1
+    },
+    {
+      "episode": "demo_283",
+      "start": 0
+    },
+    {
+      "episode": "demo_283",
+      "start": 1
+    },
+    {
+      "episode": "demo_246",
+      "start": 0
+    },
+    {
+      "episode": "demo_246",
+      "start": 1
+    },
+    {
+      "episode": "demo_296",
+      "start": 0
+    },
+    {
+      "episode": "demo_296",
+      "start": 1
+    },
+    {
+      "episode": "demo_204",
+      "start": 0
+    },
+    {
+      "episode": "demo_204",
+      "start": 1
+    },
+    {
+      "episode": "demo_254",
+      "start": 0
+    },
+    {
+      "episode": "demo_254",
+      "start": 1
+    },
+    {
+      "episode": "demo_218",
+      "start": 0
+    },
+    {
+      "episode": "demo_218",
+      "start": 1
+    },
+    {
+      "episode": "demo_268",
+      "start": 0
+    },
+    {
+      "episode": "demo_268",
+      "start": 1
+    },
+    {
+      "episode": "demo_225",
+      "start": 0
+    },
+    {
+      "episode": "demo_225",
+      "start": 1
+    },
+    {
+      "episode": "demo_275",
+      "start": 0
+    },
+    {
+      "episode": "demo_275",
+      "start": 1
+    },
+    {
+      "episode": "demo_248",
+      "start": 0
+    },
+    {
+      "episode": "demo_248",
+      "start": 1
+    },
+    {
+      "episode": "demo_298",
+      "start": 0
+    },
+    {
+      "episode": "demo_298",
+      "start": 1
+    },
+    {
+      "episode": "demo_244",
+      "start": 0
+    },
+    {
+      "episode": "demo_244",
+      "start": 1
+    },
+    {
+      "episode": "demo_294",
+      "start": 0
+    },
+    {
+      "episode": "demo_294",
+      "start": 1
+    },
+    {
+      "episode": "demo_249",
+      "start": 0
+    },
+    {
+      "episode": "demo_249",
+      "start": 1
+    },
+    {
+      "episode": "demo_299",
+      "start": 0
+    },
+    {
+      "episode": "demo_299",
+      "start": 1
+    },
+    {
+      "episode": "demo_309",
+      "start": 0
+    },
+    {
+      "episode": "demo_309",
+      "start": 1
+    },
+    {
+      "episode": "demo_359",
+      "start": 0
+    },
+    {
+      "episode": "demo_359",
+      "start": 1
+    },
+    {
+      "episode": "demo_325",
+      "start": 0
+    },
+    {
+      "episode": "demo_325",
+      "start": 1
+    },
+    {
+      "episode": "demo_375",
+      "start": 0
+    },
+    {
+      "episode": "demo_375",
+      "start": 1
+    },
+    {
+      "episode": "demo_333",
+      "start": 0
+    },
+    {
+      "episode": "demo_333",
+      "start": 1
+    },
+    {
+      "episode": "demo_383",
+      "start": 0
+    },
+    {
+      "episode": "demo_383",
+      "start": 1
+    },
+    {
+      "episode": "demo_318",
+      "start": 0
+    },
+    {
+      "episode": "demo_318",
+      "start": 1
+    },
+    {
+      "episode": "demo_368",
+      "start": 0
+    },
+    {
+      "episode": "demo_368",
+      "start": 1
+    },
+    {
+      "episode": "demo_344",
+      "start": 0
+    },
+    {
+      "episode": "demo_344",
+      "start": 1
+    },
+    {
+      "episode": "demo_394",
+      "start": 0
+    },
+    {
+      "episode": "demo_394",
+      "start": 1
+    },
+    {
+      "episode": "demo_338",
+      "start": 0
+    },
+    {
+      "episode": "demo_338",
+      "start": 1
+    },
+    {
+      "episode": "demo_388",
+      "start": 0
+    },
+    {
+      "episode": "demo_388",
+      "start": 1
+    },
+    {
+      "episode": "demo_335",
+      "start": 0
+    },
+    {
+      "episode": "demo_335",
+      "start": 1
+    },
+    {
+      "episode": "demo_385",
+      "start": 0
+    },
+    {
+      "episode": "demo_385",
+      "start": 1
+    },
+    {
+      "episode": "demo_307",
+      "start": 0
+    },
+    {
+      "episode": "demo_307",
+      "start": 1
+    },
+    {
+      "episode": "demo_357",
+      "start": 0
+    },
+    {
+      "episode": "demo_357",
+      "start": 1
+    },
+    {
+      "episode": "demo_320",
+      "start": 0
+    },
+    {
+      "episode": "demo_320",
+      "start": 1
+    },
+    {
+      "episode": "demo_370",
+      "start": 0
+    },
+    {
+      "episode": "demo_370",
+      "start": 1
+    },
+    {
+      "episode": "demo_319",
+      "start": 0
+    },
+    {
+      "episode": "demo_319",
+      "start": 1
+    },
+    {
+      "episode": "demo_369",
+      "start": 0
+    },
+    {
+      "episode": "demo_369",
+      "start": 1
+    },
+    {
+      "episode": "demo_424",
+      "start": 0
+    },
+    {
+      "episode": "demo_424",
+      "start": 1
+    },
+    {
+      "episode": "demo_474",
+      "start": 0
+    },
+    {
+      "episode": "demo_474",
+      "start": 1
+    },
+    {
+      "episode": "demo_434",
+      "start": 0
+    },
+    {
+      "episode": "demo_434",
+      "start": 1
+    },
+    {
+      "episode": "demo_484",
+      "start": 0
+    },
+    {
+      "episode": "demo_484",
+      "start": 1
+    },
+    {
+      "episode": "demo_408",
+      "start": 0
+    },
+    {
+      "episode": "demo_408",
+      "start": 1
+    },
+    {
+      "episode": "demo_458",
+      "start": 0
+    },
+    {
+      "episode": "demo_458",
+      "start": 1
+    },
+    {
+      "episode": "demo_430",
+      "start": 0
+    },
+    {
+      "episode": "demo_430",
+      "start": 1
+    },
+    {
+      "episode": "demo_480",
+      "start": 0
+    },
+    {
+      "episode": "demo_480",
+      "start": 1
+    },
+    {
+      "episode": "demo_422",
+      "start": 0
+    },
+    {
+      "episode": "demo_422",
+      "start": 1
+    },
+    {
+      "episode": "demo_472",
+      "start": 0
+    },
+    {
+      "episode": "demo_472",
+      "start": 1
+    },
+    {
+      "episode": "demo_410",
+      "start": 0
+    },
+    {
+      "episode": "demo_410",
+      "start": 1
+    },
+    {
+      "episode": "demo_460",
+      "start": 0
+    },
+    {
+      "episode": "demo_460",
+      "start": 1
+    },
+    {
+      "episode": "demo_435",
+      "start": 0
+    },
+    {
+      "episode": "demo_435",
+      "start": 1
+    },
+    {
+      "episode": "demo_485",
+      "start": 0
+    },
+    {
+      "episode": "demo_485",
+      "start": 1
+    },
+    {
+      "episode": "demo_447",
+      "start": 0
+    },
+    {
+      "episode": "demo_447",
+      "start": 1
+    },
+    {
+      "episode": "demo_497",
+      "start": 0
+    },
+    {
+      "episode": "demo_497",
+      "start": 1
+    },
+    {
+      "episode": "demo_415",
+      "start": 0
+    },
+    {
+      "episode": "demo_415",
+      "start": 1
+    },
+    {
+      "episode": "demo_465",
+      "start": 0
+    },
+    {
+      "episode": "demo_465",
+      "start": 1
+    },
+    {
+      "episode": "demo_414",
+      "start": 0
+    },
+    {
+      "episode": "demo_414",
+      "start": 1
+    },
+    {
+      "episode": "demo_464",
+      "start": 0
+    },
+    {
+      "episode": "demo_464",
+      "start": 1
+    }
+  ],
+  "scope": "same learned native weights on diverse validation inputs; not policy success or paired-training equality",
+  "policy_weights_sha256": "39e80ba596f76ca630fb9c6060eb8293845953f219192310072b1f22ef0de410"
+}

@@ -1,0 +1,26 @@
+cff-version: 1.2.0
+message: "If using this reproduction, cite the original QueST paper and describe this repository as a small-scale reproduction."
+title: "QueST native Jittor small-scale reproduction"
+type: software
+repository-code: "https://github.com/bjxj13c/QueST-Jittor"
+authors:
+  - family-names: "张"
+    given-names: "鼎"
+license: MIT
+version: "0.1.0"
+preferred-citation:
+  type: article
+  title: "QueST: Self-Supervised Skill Abstractions for Learning Continuous Control"
+  authors:
+    - family-names: Mete
+      given-names: Atharva
+    - family-names: Xue
+      given-names: Haotian
+    - family-names: Wilcox
+      given-names: Albert
+    - family-names: Chen
+      given-names: Yongxin
+    - family-names: Garg
+      given-names: Animesh
+  year: 2024
+  url: "https://arxiv.org/abs/2407.15840"

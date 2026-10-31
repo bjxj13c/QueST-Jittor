@@ -1,0 +1,402 @@
+[
+  {
+    "path": "reports/runs/five_task_10pct_20261029/experiments/bridge.log",
+    "sha256": "e186dc98c4dcab6d3f14288f3d1518f9e2c9fadf2969f2b51b0f950ae0ec9aa7"
+  },
+  {
+    "path": "reports/runs/five_task_10pct_20261029/experiments/canonical_labels.log",
+    "sha256": "fafae89442aa206c7f5135a1f753e2ec2308d6938ec8dfba4e19651cb82f546f"
+  },
+  {
+    "path": "reports/runs/five_task_10pct_20261029/experiments/canonical_labels_before_retry_1793243349.log",
+    "sha256": "09c27ae2018d002212993b14b41764c657f96414a4830505820667e08fec7ea1"
+  },
+  {
+    "path": "reports/runs/five_task_10pct_20261029/experiments/collect_extra_ten.log",
+    "sha256": "6b4c8b7d59533a9a3ac7b80abb27a5f421c34f084ec73a8cf6751fce148ed13b"
+  },
+  {
+    "path": "reports/runs/five_task_10pct_20261029/experiments/collect_new_two.log",
+    "sha256": "5edc4099f84e78cdf442fe116ef1f61d80e10aea6b2d3cdf6ebaa58326b9a365"
+  },
+  {
+    "path": "reports/runs/five_task_10pct_20261029/experiments/completion_report.log",
+    "sha256": "42daf5626aceb9cf4672e370765a3de850a13eb7d8dc6ae184d3573923426739"
+  },
+  {
+    "path": "reports/runs/five_task_10pct_20261029/experiments/completion_report_before_retry_1793247539.log",
+    "sha256": "0b2ba26a38f18d192402c0e1b98da124ca7a4a4cf4205316205b267988e09503"
+  },
+  {
+    "path": "reports/runs/five_task_10pct_20261029/experiments/failed_1793243348.json",
+    "sha256": "ec36ff4b67bd565c0b1e19b7e15bb1b6a1091960a62aef3cfb2b11f3ec05d8f5"
+  },
+  {
+    "path": "reports/runs/five_task_10pct_20261029/experiments/failed_1793247537.json",
+    "sha256": "b9d7480f99157dd4f1933a6d1de76ae9fe96c451a9c38bb991ca522366bb0e08"
+  },
+  {
+    "path": "reports/runs/five_task_10pct_20261029/experiments/fixture_jittor.json",
+    "sha256": "ca8699656aac96c98cb9a52dcc36424a7d4175083a016df2f8c49486d2262bb0"
+  },
+  {
+    "path": "reports/runs/five_task_10pct_20261029/experiments/fixture_jittor.log",
+    "sha256": "e774d55a78295e20640985c0ccf019895c6c77533b87f1363e08c9e287396438"
+  },
+  {
+    "path": "reports/runs/five_task_10pct_20261029/experiments/fixture_torch.json",
+    "sha256": "b63ac606be71ba24da46e19cce0b8414f31c194bc9d53b988a21098fb8777b76"
+  },
+  {
+    "path": "reports/runs/five_task_10pct_20261029/experiments/fixture_torch.log",
+    "sha256": "256f5be28eca962f6b89621b775bf2b4affa889a9074f6aa9cce3ee3ace025dc"
+  },
+  {
+    "path": "reports/runs/five_task_10pct_20261029/experiments/goal_isolation.log",
+    "sha256": "88b6ea29b3abe37e6563b774410fa0b3b1eda242e7ef1e5ca3f31e7fd83fefe3"
+  },
+  {
+    "path": "reports/runs/five_task_10pct_20261029/experiments/policy_jittor.log",
+    "sha256": "9a90c4b2ca404e8f8a4afe6b9e779f39d35d6af26ce8d5da1806a89f6f81006a"
+  },
+  {
+    "path": "reports/runs/five_task_10pct_20261029/experiments/policy_torch.log",
+    "sha256": "be2de5522e697186cd704cfbed83be19308b894e4016b9ce4c0d33367c76404b"
+  },
+  {
+    "path": "reports/runs/five_task_10pct_20261029/experiments/prepare_data.log",
+    "sha256": "290de96275410eee4cb5e4fa7ef8f5f8a6ce893f55f2697b3b2dbbb36194e9a0"
+  },
+  {
+    "path": "reports/runs/five_task_10pct_20261029/experiments/same_weights.json",
+    "sha256": "119ebb83b3a817b7f7115f5f1c9180429a6bb190ff0413f23f49fe88bdf245b6"
+  },
+  {
+    "path": "reports/runs/five_task_10pct_20261029/experiments/smoke_jittor.log",
+    "sha256": "6deb6ba97b547feb85c35b48d2353a1f719df8776db4a07de8684be4929f92a8"
+  },
+  {
+    "path": "reports/runs/five_task_10pct_20261029/experiments/smoke_torch.log",
+    "sha256": "5887c163da4db9a997f34f08c46599a476e119ab463f029e9b9aea0c3b28e2db"
+  },
+  {
+    "path": "reports/runs/five_task_10pct_20261029/experiments/test_freeze.json",
+    "sha256": "01c8a9ef1908fcfb187659d059c3da19c184725c00551f45583c17e851a399c8"
+  },
+  {
+    "path": "reports/runs/five_task_10pct_20261029/experiments/test_jittor_door-open-v2.log",
+    "sha256": "8678d4fe48f09c1258b97d65338515723eab3e18309772c7ea3665a797eaf2f8"
+  },
+  {
+    "path": "reports/runs/five_task_10pct_20261029/experiments/test_jittor_push-v2.log",
+    "sha256": "e3aefd4503cf38726b8dbdb78c2cb338d612837521f639140a3a698ef1b63f1b"
+  },
+  {
+    "path": "reports/runs/five_task_10pct_20261029/experiments/test_jittor_reach-v2.log",
+    "sha256": "2ed89f230979ea922ef8b22b4cafc4037c2c1db1f7dc58722265fa724eb0800c"
+  },
+  {
+    "path": "reports/runs/five_task_10pct_20261029/experiments/test_jittor_reach-wall-v2.log",
+    "sha256": "af5d0df5d0fecadf8ced62ac8fdbf6abe814e99e949ce538bdab220a99e02d32"
+  },
+  {
+    "path": "reports/runs/five_task_10pct_20261029/experiments/test_jittor_window-open-v2.log",
+    "sha256": "41dcdb07bd59f4f0b99bd891dbf573ac1f5c37c5198679d9aa43fd2c85cb1021"
+  },
+  {
+    "path": "reports/runs/five_task_10pct_20261029/experiments/test_torch_door-open-v2.log",
+    "sha256": "142424364b521d181458effb4b6782a74e9294e354507a4f5f51b3b25347f0a4"
+  },
+  {
+    "path": "reports/runs/five_task_10pct_20261029/experiments/test_torch_push-v2.log",
+    "sha256": "b42a8d541238d118437f5705aaac2dee3eedf00f20d6a734d11db9c0fda8889c"
+  },
+  {
+    "path": "reports/runs/five_task_10pct_20261029/experiments/test_torch_reach-v2.log",
+    "sha256": "775529548c558f4aa2fe55579bcd57a1b6f5f6175494559a97b3c62911f7d7f9"
+  },
+  {
+    "path": "reports/runs/five_task_10pct_20261029/experiments/test_torch_reach-wall-v2.log",
+    "sha256": "aa4fc383ed787c42f493e9e7c46d085f28dd8bbf89e68bb9a3d8660d360dcb51"
+  },
+  {
+    "path": "reports/runs/five_task_10pct_20261029/experiments/test_torch_window-open-v2.log",
+    "sha256": "f9afebfdf35e27019ccb05f1326426a3175a47ed3f9af7786095ad98e3fc7e1d"
+  },
+  {
+    "path": "reports/runs/five_task_10pct_20261029/experiments/tokenizer_jittor.log",
+    "sha256": "fbff5db166ca4352edb1529a251805e27c17102f00f93c1a4e7642260dc312f8"
+  },
+  {
+    "path": "reports/runs/five_task_10pct_20261029/experiments/tokenizer_plan.log",
+    "sha256": "897d05669adb037859327d20152138d12d824c1473168f396661f8e2ec97e992"
+  },
+  {
+    "path": "reports/runs/five_task_10pct_20261029/experiments/tokenizer_torch.log",
+    "sha256": "2ab27666b6704162c6b97d037bebc87ceb99d706588ef99bdfcf42c853906097"
+  },
+  {
+    "path": "reports/runs/five_task_10pct_20261029/experiments/workflow.json",
+    "sha256": "653fc8c022816b270b24174304ef72275d61c03d7a0245eefe50dce08e9afa2c"
+  },
+  {
+    "path": "reports/runs/five_task_10pct_20261029/experiments/policy_jittor/best_validation.json",
+    "sha256": "4450b5d921e9a7b09752d76638d08cae73c84664bc74d37c0a1f659269e72967"
+  },
+  {
+    "path": "reports/runs/five_task_10pct_20261029/experiments/policy_jittor/config.json",
+    "sha256": "6a691c952af0a10d860a95dfd4a7da491b73b6ab4f3bff00202320d861e026bb"
+  },
+  {
+    "path": "reports/runs/five_task_10pct_20261029/experiments/policy_jittor/gradients.jsonl",
+    "sha256": "b72689d84279012e8d2e6049d1cae58f18609d114acd8a641f62bda08e4d5ae8"
+  },
+  {
+    "path": "reports/runs/five_task_10pct_20261029/experiments/policy_jittor/initial_validation.json",
+    "sha256": "70e2a71553614552fe575fb8dfb9e61975880bb30e0ddbae29f1370c276e6b32"
+  },
+  {
+    "path": "reports/runs/five_task_10pct_20261029/experiments/policy_jittor/metrics.csv",
+    "sha256": "92d7f714684a7033437b83c8d8a90c9f87080b2914fb78163e59d7448e3ff3c9"
+  },
+  {
+    "path": "reports/runs/five_task_10pct_20261029/experiments/policy_jittor/metrics.jsonl",
+    "sha256": "69d17e90b53910d210b1b301a44e79ac5c20119d77a3323832d4416ba125099e"
+  },
+  {
+    "path": "reports/runs/five_task_10pct_20261029/experiments/policy_jittor/summary.json",
+    "sha256": "76ad820aa1b107d0d94ce9c643369ffca613b1794a9dde90c213e4ba2a6bc4ce"
+  },
+  {
+    "path": "reports/runs/five_task_10pct_20261029/experiments/policy_torch/best_validation.json",
+    "sha256": "122ef2332b6c54a6c5c692cb479cc91a454fcad46519d0463c8612ff05ffe7ed"
+  },
+  {
+    "path": "reports/runs/five_task_10pct_20261029/experiments/policy_torch/config.json",
+    "sha256": "97b06e2102f1881ac3291d837a69d8ba370ec84c62ff8312e0b8803000420856"
+  },
+  {
+    "path": "reports/runs/five_task_10pct_20261029/experiments/policy_torch/gradients.jsonl",
+    "sha256": "98314a15bc0f10385ce590c55b314116a7f6cf7319fe83eae590a0fab188cab9"
+  },
+  {
+    "path": "reports/runs/five_task_10pct_20261029/experiments/policy_torch/initial_validation.json",
+    "sha256": "dbd5a0bd1714b20e6566296e8846ec128692e69573203949d242d681636f8d80"
+  },
+  {
+    "path": "reports/runs/five_task_10pct_20261029/experiments/policy_torch/metrics.csv",
+    "sha256": "ad1860566b399aa10abd0b8e44767ea6af1e5f78699f976ef361660cc79d8ce7"
+  },
+  {
+    "path": "reports/runs/five_task_10pct_20261029/experiments/policy_torch/metrics.jsonl",
+    "sha256": "87613573a4f89eb498cb8ab1905e012c97216841911319ecf65a8ca21b29bd3c"
+  },
+  {
+    "path": "reports/runs/five_task_10pct_20261029/experiments/policy_torch/summary.json",
+    "sha256": "9a38637b71b450d2471948341c1cb7fa9231c8468a68c4908d4b01bb87aa2294"
+  },
+  {
+    "path": "reports/runs/five_task_10pct_20261029/experiments/repairs/command_list_alias_fix_20261029/canonical_labels_failed.log",
+    "sha256": "09c27ae2018d002212993b14b41764c657f96414a4830505820667e08fec7ea1"
+  },
+  {
+    "path": "reports/runs/five_task_10pct_20261029/experiments/repairs/command_list_alias_fix_20261029/repair.json",
+    "sha256": "670c197e80bef1c5bc927f478694aee11b61f1435daa3747dd6478394b672e27"
+  },
+  {
+    "path": "reports/runs/five_task_10pct_20261029/experiments/repairs/command_list_alias_fix_20261029/workflow_before.json",
+    "sha256": "3433c2d7e17fec1333353a0b2af26c23d1ccb6bcc0ba76c52ee4bc4cc21eac52"
+  },
+  {
+    "path": "reports/runs/five_task_10pct_20261029/experiments/repairs/report_plot_dependency_20261029/completion_report_failed.log",
+    "sha256": "0b2ba26a38f18d192402c0e1b98da124ca7a4a4cf4205316205b267988e09503"
+  },
+  {
+    "path": "reports/runs/five_task_10pct_20261029/experiments/repairs/report_plot_dependency_20261029/install.log",
+    "sha256": "92b6b3ea25014f04e3df950fcfc755546494cb3c606603bc83d26715048cc95d"
+  },
+  {
+    "path": "reports/runs/five_task_10pct_20261029/experiments/repairs/report_plot_dependency_20261029/repair.json",
+    "sha256": "e4412fdbd482be4d9fa5b7813840b50c68cfb02815dd60ab2e57cfdfbfce1c7e"
+  },
+  {
+    "path": "reports/runs/five_task_10pct_20261029/experiments/smoke_jittor/best_validation.json",
+    "sha256": "aa83e75f3be65e072f43bea868bd2e8cfb5c87e797b529fb3710226c6fb93793"
+  },
+  {
+    "path": "reports/runs/five_task_10pct_20261029/experiments/smoke_jittor/config.json",
+    "sha256": "b4e7b8bcea51d9854e88cb1e2e198336822f0f3a94b0a990095a04ad2ebda5a3"
+  },
+  {
+    "path": "reports/runs/five_task_10pct_20261029/experiments/smoke_jittor/gradients.jsonl",
+    "sha256": "297426a947e24d4a4e28877d1d7a0c658a1136526513d045b54b56996306ef44"
+  },
+  {
+    "path": "reports/runs/five_task_10pct_20261029/experiments/smoke_jittor/initial_validation.json",
+    "sha256": "72537b134baacbdbe9091e75131123908ad7d25f7b519f29db8f816272af4188"
+  },
+  {
+    "path": "reports/runs/five_task_10pct_20261029/experiments/smoke_jittor/metrics.csv",
+    "sha256": "507d65a6d581b0b2746ece0cf3f02b87c863236ade0de40f33505159c8f81df8"
+  },
+  {
+    "path": "reports/runs/five_task_10pct_20261029/experiments/smoke_jittor/metrics.jsonl",
+    "sha256": "15a5713710dbe1602de9df93423feb9caa10bc239c1d172aece581f492c2d35e"
+  },
+  {
+    "path": "reports/runs/five_task_10pct_20261029/experiments/smoke_jittor/summary.json",
+    "sha256": "bdc9a39792e189f4d0cbd3d22997b263c4d14e3f93769a48e1ebb28382e2a26d"
+  },
+  {
+    "path": "reports/runs/five_task_10pct_20261029/experiments/smoke_torch/best_validation.json",
+    "sha256": "f7ce39c2aa090bc330b5db79352fb58ef64608c8c40963588a33e4d7c3fde31b"
+  },
+  {
+    "path": "reports/runs/five_task_10pct_20261029/experiments/smoke_torch/config.json",
+    "sha256": "84a9e9dfe8666b9945a0b791f4fa26de122e7661ed85f9c5d906e147ea1fcef4"
+  },
+  {
+    "path": "reports/runs/five_task_10pct_20261029/experiments/smoke_torch/gradients.jsonl",
+    "sha256": "8b3423868075d166f592531519c1b7e6782009e295e43b8175e5bded19099745"
+  },
+  {
+    "path": "reports/runs/five_task_10pct_20261029/experiments/smoke_torch/initial_validation.json",
+    "sha256": "dbd5a0bd1714b20e6566296e8846ec128692e69573203949d242d681636f8d80"
+  },
+  {
+    "path": "reports/runs/five_task_10pct_20261029/experiments/smoke_torch/metrics.csv",
+    "sha256": "397edb116de9cf8c5cf3916cda52c71bc2fc95b72237a38674bbfb15c6743bc5"
+  },
+  {
+    "path": "reports/runs/five_task_10pct_20261029/experiments/smoke_torch/metrics.jsonl",
+    "sha256": "105547fa4341dbe081bc584c48f66327a849385b71db569cfe5d70de696b594b"
+  },
+  {
+    "path": "reports/runs/five_task_10pct_20261029/experiments/smoke_torch/summary.json",
+    "sha256": "80c52efe237d9a9bd5db2415705141c12685f6e89aff87e3b7933df51a05755d"
+  },
+  {
+    "path": "reports/runs/five_task_10pct_20261029/dataset/outputs/five_tokenizer_jittor/best_validation.json",
+    "sha256": "5146d9f9242e460ba547132408a510cae3c6b6771ed446b8988e0933ba0c4c26"
+  },
+  {
+    "path": "reports/runs/five_task_10pct_20261029/dataset/outputs/five_tokenizer_jittor/config.json",
+    "sha256": "b93fef1ea5b7a4c81cd037b87dae7984e664fe1470d2b339b3ae2958ac4db33d"
+  },
+  {
+    "path": "reports/runs/five_task_10pct_20261029/dataset/outputs/five_tokenizer_jittor/metrics.csv",
+    "sha256": "fdd3f31e418ffbe444bc63ca13cc739d5452314a78a07604ce4dae9605a32889"
+  },
+  {
+    "path": "reports/runs/five_task_10pct_20261029/dataset/outputs/five_tokenizer_jittor/metrics.jsonl",
+    "sha256": "16a8d779f568dd3265211bc61acc9a82775bf36e09d035fbe13771db5f252577"
+  },
+  {
+    "path": "reports/runs/five_task_10pct_20261029/dataset/outputs/five_tokenizer_jittor/summary.json",
+    "sha256": "af6e9aca0cccf895195dbf9f576c70f7888984f47b08fc66ba5690f0b715fc68"
+  },
+  {
+    "path": "reports/runs/five_task_10pct_20261029/dataset/outputs/five_tokenizer_torch/best_validation.json",
+    "sha256": "0d6c3b93714b6cca5b3f1fd9be8c339fb558203178678db7e620beb03f8a1648"
+  },
+  {
+    "path": "reports/runs/five_task_10pct_20261029/dataset/outputs/five_tokenizer_torch/config.json",
+    "sha256": "b61542327a852e5e8ead06e66604d99eb4ceef5f905383e39fdcf7b917ad8860"
+  },
+  {
+    "path": "reports/runs/five_task_10pct_20261029/dataset/outputs/five_tokenizer_torch/initial_validation.json",
+    "sha256": "0fc36379477c33431bf73e94446d7751905a8c1dab7fd2ca39f7877cb874daf6"
+  },
+  {
+    "path": "reports/runs/five_task_10pct_20261029/dataset/outputs/five_tokenizer_torch/metrics.csv",
+    "sha256": "cd1f632dc45535d5dd6e91a6dcac0a7ebe71aaf0d416438476e0a69ddb2cc562"
+  },
+  {
+    "path": "reports/runs/five_task_10pct_20261029/dataset/outputs/five_tokenizer_torch/metrics.jsonl",
+    "sha256": "87a1f4629c52f4e7757ea56734f38f6cef3ffd64838d725ae8fd161c1f4c3164"
+  },
+  {
+    "path": "reports/runs/five_task_10pct_20261029/dataset/outputs/five_tokenizer_torch/summary.json",
+    "sha256": "d9159ff578ca4c841bf218da930513f54ee4d1915d7eac5cbab49dc36d6d55b5"
+  },
+  {
+    "path": "reports/runs/five_task_10pct_20261029/dataset/outputs/test_jittor_door-open-v2/episodes.jsonl",
+    "sha256": "8911f80d0c57a906a40efb3b565b6bd0c93ae706d0674c386176b6be120e91a6"
+  },
+  {
+    "path": "reports/runs/five_task_10pct_20261029/dataset/outputs/test_jittor_door-open-v2/summary.json",
+    "sha256": "d78178d3c5a9f4afa6cca7bdc640bc7e200ec2609d4d88dd2a07cfe2c38ea2bf"
+  },
+  {
+    "path": "reports/runs/five_task_10pct_20261029/dataset/outputs/test_jittor_push-v2/episodes.jsonl",
+    "sha256": "24fc76111e2db8b3bcf35e785adf48510d810b7952224004ea16dfa0bcf1436d"
+  },
+  {
+    "path": "reports/runs/five_task_10pct_20261029/dataset/outputs/test_jittor_push-v2/summary.json",
+    "sha256": "5300c448ac924f779c887ea11af3792f86e76708d56f752fa89ec498bb5d4323"
+  },
+  {
+    "path": "reports/runs/five_task_10pct_20261029/dataset/outputs/test_jittor_reach-v2/episodes.jsonl",
+    "sha256": "a2c3cf30b9e14a2342cccea34ba3d34b1ad8418f703aa81ae77d70c18c519476"
+  },
+  {
+    "path": "reports/runs/five_task_10pct_20261029/dataset/outputs/test_jittor_reach-v2/summary.json",
+    "sha256": "55a1ae5ce7a4cb34a5400803f436c37e85eef7d9193b56cc1493003d34a4676e"
+  },
+  {
+    "path": "reports/runs/five_task_10pct_20261029/dataset/outputs/test_jittor_reach-wall-v2/episodes.jsonl",
+    "sha256": "59710346b15805dc86b440f80b736cb33b48790bed90c3a151eed2b3928464c3"
+  },
+  {
+    "path": "reports/runs/five_task_10pct_20261029/dataset/outputs/test_jittor_reach-wall-v2/summary.json",
+    "sha256": "6eb7c745c81c1ff8a371cd13ea34277a3d663d332d1918477062727c7a1f4aab"
+  },
+  {
+    "path": "reports/runs/five_task_10pct_20261029/dataset/outputs/test_jittor_window-open-v2/episodes.jsonl",
+    "sha256": "25017de8db404c4ddb083d3544a0b6bee7684ec8c1800762d446d18ce8bce618"
+  },
+  {
+    "path": "reports/runs/five_task_10pct_20261029/dataset/outputs/test_jittor_window-open-v2/summary.json",
+    "sha256": "e67f944fbf679e063fcec6fe08830f11c191cdd193c4fe6a1b7c9eb0a738368c"
+  },
+  {
+    "path": "reports/runs/five_task_10pct_20261029/dataset/outputs/test_torch_door-open-v2/episodes.jsonl",
+    "sha256": "619f3317e0ef4028be00a95a3c4a66b90abfa8aac8a322fb3410c271c75be981"
+  },
+  {
+    "path": "reports/runs/five_task_10pct_20261029/dataset/outputs/test_torch_door-open-v2/summary.json",
+    "sha256": "160c0c695651874dd1325ea45384836677e81d8562c65906ef68e7007405e46e"
+  },
+  {
+    "path": "reports/runs/five_task_10pct_20261029/dataset/outputs/test_torch_push-v2/episodes.jsonl",
+    "sha256": "748d7082769fa709fca613b354d13f1db4345bc90718963dfbca54a9b3c25afa"
+  },
+  {
+    "path": "reports/runs/five_task_10pct_20261029/dataset/outputs/test_torch_push-v2/summary.json",
+    "sha256": "87381a96fd9553d3b68429f52a9b3146aacec56e6254e55963da0c1419842ee1"
+  },
+  {
+    "path": "reports/runs/five_task_10pct_20261029/dataset/outputs/test_torch_reach-v2/episodes.jsonl",
+    "sha256": "e665928aa805ca567df28ef8f699630c9e55d4066722986a4b988eb21139537b"
+  },
+  {
+    "path": "reports/runs/five_task_10pct_20261029/dataset/outputs/test_torch_reach-v2/summary.json",
+    "sha256": "686d96b400c68cb10726e709bbcc6d5827c3a5fd2a35a81ff28699c875017baa"
+  },
+  {
+    "path": "reports/runs/five_task_10pct_20261029/dataset/outputs/test_torch_reach-wall-v2/episodes.jsonl",
+    "sha256": "1575495b377ce4bf9762f1090b3d4da44e9c67e9ecf3ca1c6a396e90acbcb846"
+  },
+  {
+    "path": "reports/runs/five_task_10pct_20261029/dataset/outputs/test_torch_reach-wall-v2/summary.json",
+    "sha256": "e5d575242e9534bc80a0c952a82cc4697db2761dca58e37f53586f641403eb00"
+  },
+  {
+    "path": "reports/runs/five_task_10pct_20261029/dataset/outputs/test_torch_window-open-v2/episodes.jsonl",
+    "sha256": "ce0b3c13b1b2c22a22fad5cef2fd0b2542875862d66f793ed0641dd503f94eea"
+  },
+  {
+    "path": "reports/runs/five_task_10pct_20261029/dataset/outputs/test_torch_window-open-v2/summary.json",
+    "sha256": "555566d71ebef1de8c4dadccdcba550f7ea03d94b22683efac8effb83b844d56"
+  }
+]

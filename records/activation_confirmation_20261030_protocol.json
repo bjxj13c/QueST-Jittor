@@ -1,0 +1,65 @@
+{
+  "registered_utc": "2026-10-30T12:39:17.311982+00:00",
+  "objective": "Fresh paired-seed confirmation of selected Mish+ReLU versus original Mish+GELU",
+  "cases": [
+    "mish_gelu",
+    "mish_relu"
+  ],
+  "training_seeds": [
+    560500,
+    560600,
+    560700
+  ],
+  "policy_initialization_seed": "training_seed+1",
+  "selection_seed_excluded": 520500,
+  "tasks": [
+    "reach-v2",
+    "reach-wall-v2",
+    "push-v2",
+    "door-open-v2",
+    "window-open-v2"
+  ],
+  "dataset_sha256": "c899d5923933b57a8957fe20a48554756987f8ab72ae772f8b2adb1f3454fab9",
+  "train_episodes": 450,
+  "validation_episodes": 100,
+  "tokenizer_updates": 22180,
+  "policy_updates": 12000,
+  "batch_size": 16,
+  "same_initialization_and_batches_within_seed": true,
+  "new_scene_seeds": [
+    150000,
+    150029
+  ],
+  "sampling_seed": 160000,
+  "action_horizon": 8,
+  "top_k": 5,
+  "max_steps": 150,
+  "actual_rollouts_target": 1800,
+  "frameworks": [
+    "torch",
+    "jittor"
+  ],
+  "max_workers": 4,
+  "unchanged": [
+    "ResNetReLU",
+    "FSQbound/tanh/rounding",
+    "attention",
+    "architecturewidths/layers",
+    "originalallpositionreconstructionL1",
+    "RGB/255",
+    "450train100validationepisode split"
+  ],
+  "tokenizer_pairing": "eachcelltrainsbothframeworktokenizers;cellnativebestsharedwithpairedpoliciesviastaticexport;canonicaltokenlabelsregeneratedineachcell",
+  "strict_alignment": {
+    "atol": 2e-05,
+    "rtol": 0.0002,
+    "integer_tokens_exact": true,
+    "decoder_precision_patch": false
+  },
+  "primary_endpoint": "Within each framework, mean across three independent paired training-seed five-task success-rate differences",
+  "statistics": "Report each seed, paired-seed t95 df2, hierarchical paired seed/scene bootstrap; do not count scenes/frameworks as independent training seeds",
+  "failures": "Preserve every failure; no automatic rerun or dropping failed pairs; no tolerance relaxation",
+  "scheduling": "Existing idle RTX4090 port44591, no rental, max4 workers, memory/disk gated; no automatic shutdown; no holding data changes",
+  "scope": "small five-task confirmation; three seeds have limited statistical power",
+  "script_sha256": "5bd22de2b68b70ae7287959c30e4705d6a8c7dc342d3d5c4ab3d88fd60dbc17d"
+}

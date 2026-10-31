@@ -1,0 +1,49 @@
+{
+  "status": "passed",
+  "archive_verification": {
+    "sha256": "9fef5ee4b4c2c3d58e99c657cd669149623cb15ccd56173fd2cb2ca0aaa14ba7",
+    "crc": "passed",
+    "safe_paths": "passed",
+    "added_files": 412,
+    "identical_overlaps": 0
+  },
+  "actual_rollouts": 360,
+  "framework_rollouts": {
+    "torch": 180,
+    "jittor": 180
+  },
+  "strict_original_tolerances_preserved": true,
+  "token_ids_exact": true,
+  "original_weights_and_data_hashes_unchanged": true,
+  "numeric_implementation_patch": "frozen Jittor decoder LayerNorm FP64accumulation,FP32params/interfaces",
+  "old_failed_reports_preserved": true,
+  "no_training": true,
+  "results": {
+    "torch": {
+      "successes": 95,
+      "episodes": 150,
+      "task_successes": [
+        6,
+        21,
+        11,
+        30,
+        27
+      ],
+      "held_all60": 4,
+      "holding_episodes": 30
+    },
+    "jittor": {
+      "successes": 94,
+      "episodes": 150,
+      "task_successes": [
+        6,
+        22,
+        7,
+        30,
+        29
+      ],
+      "held_all60": 5,
+      "holding_episodes": 30
+    }
+  }
+}

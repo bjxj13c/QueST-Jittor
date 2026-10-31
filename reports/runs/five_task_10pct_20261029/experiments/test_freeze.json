@@ -1,0 +1,20 @@
+{
+  "utc": "2026-10-29T03:41:22.364271+00:00",
+  "protocol_sha256": "9d9a6f6367046cc11ebe290f6dedde9ae6b270ce430bac26d6101de66f2ce6f4",
+  "dataset_sha256": "c899d5923933b57a8957fe20a48554756987f8ab72ae772f8b2adb1f3454fab9",
+  "tokenizer_sha256": "7d9091522441076da0df94c71247dff856cb93e2909b1226ff741b57e615869a",
+  "models": {
+    "torch": "8d76d60e69cf8b3ccc56f37ee6718b3ac77c07f438290e8dfbc7ef37fed214db",
+    "jittor": "39e80ba596f76ca630fb9c6060eb8293845953f219192310072b1f22ef0de410"
+  },
+  "test": {
+    "seed_start": 12000,
+    "episodes_per_task": 30,
+    "top_k": 5,
+    "sampling_seed": 30000,
+    "per_episode_sampling": true,
+    "action_horizon": 8,
+    "max_steps": 150,
+    "commitment": "no post-test tuning; audit goal isolation from all known datasets first"
+  }
+}

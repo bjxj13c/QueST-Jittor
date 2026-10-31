@@ -1,0 +1,240 @@
+{
+  "scope": "native learned-policy closed-loop evaluation",
+  "framework": "jittor",
+  "version": "1.3.11.0",
+  "environment": "door-open-v2-goal-observable",
+  "task_id": 3,
+  "per_episode_sampling": true,
+  "device": "cuda",
+  "seed_set": "experiment",
+  "episodes": [
+    {
+      "seed": 12000,
+      "steps": 76,
+      "success": true,
+      "return": 271.5162514037617,
+      "actions_requiring_clip": 46
+    },
+    {
+      "seed": 12001,
+      "steps": 94,
+      "success": true,
+      "return": 346.8644948667435,
+      "actions_requiring_clip": 79
+    },
+    {
+      "seed": 12002,
+      "steps": 77,
+      "success": true,
+      "return": 274.5409985593097,
+      "actions_requiring_clip": 46
+    },
+    {
+      "seed": 12003,
+      "steps": 74,
+      "success": true,
+      "return": 270.79329560263255,
+      "actions_requiring_clip": 51
+    },
+    {
+      "seed": 12004,
+      "steps": 84,
+      "success": true,
+      "return": 293.18699537795544,
+      "actions_requiring_clip": 51
+    },
+    {
+      "seed": 12005,
+      "steps": 81,
+      "success": true,
+      "return": 272.6656577125517,
+      "actions_requiring_clip": 50
+    },
+    {
+      "seed": 12006,
+      "steps": 75,
+      "success": true,
+      "return": 269.30734248340167,
+      "actions_requiring_clip": 45
+    },
+    {
+      "seed": 12007,
+      "steps": 87,
+      "success": true,
+      "return": 340.2327421891355,
+      "actions_requiring_clip": 63
+    },
+    {
+      "seed": 12008,
+      "steps": 72,
+      "success": true,
+      "return": 254.00283635782296,
+      "actions_requiring_clip": 38
+    },
+    {
+      "seed": 12009,
+      "steps": 85,
+      "success": true,
+      "return": 328.3824303885712,
+      "actions_requiring_clip": 73
+    },
+    {
+      "seed": 12010,
+      "steps": 84,
+      "success": true,
+      "return": 287.3694623250629,
+      "actions_requiring_clip": 56
+    },
+    {
+      "seed": 12011,
+      "steps": 78,
+      "success": true,
+      "return": 268.7193339237979,
+      "actions_requiring_clip": 51
+    },
+    {
+      "seed": 12012,
+      "steps": 81,
+      "success": true,
+      "return": 285.6916500135983,
+      "actions_requiring_clip": 47
+    },
+    {
+      "seed": 12013,
+      "steps": 87,
+      "success": true,
+      "return": 313.7290266182965,
+      "actions_requiring_clip": 62
+    },
+    {
+      "seed": 12014,
+      "steps": 78,
+      "success": true,
+      "return": 276.79714210462765,
+      "actions_requiring_clip": 49
+    },
+    {
+      "seed": 12015,
+      "steps": 85,
+      "success": true,
+      "return": 267.40390569693363,
+      "actions_requiring_clip": 53
+    },
+    {
+      "seed": 12016,
+      "steps": 78,
+      "success": true,
+      "return": 252.29909447476027,
+      "actions_requiring_clip": 41
+    },
+    {
+      "seed": 12017,
+      "steps": 75,
+      "success": true,
+      "return": 259.5063757498388,
+      "actions_requiring_clip": 44
+    },
+    {
+      "seed": 12018,
+      "steps": 88,
+      "success": true,
+      "return": 334.122281975111,
+      "actions_requiring_clip": 67
+    },
+    {
+      "seed": 12019,
+      "steps": 84,
+      "success": true,
+      "return": 293.7428289137176,
+      "actions_requiring_clip": 46
+    },
+    {
+      "seed": 12020,
+      "steps": 85,
+      "success": true,
+      "return": 280.25483403755857,
+      "actions_requiring_clip": 48
+    },
+    {
+      "seed": 12021,
+      "steps": 150,
+      "success": false,
+      "return": 397.78085345444157,
+      "actions_requiring_clip": 111
+    },
+    {
+      "seed": 12022,
+      "steps": 150,
+      "success": false,
+      "return": 412.3224003455077,
+      "actions_requiring_clip": 127
+    },
+    {
+      "seed": 12023,
+      "steps": 110,
+      "success": true,
+      "return": 345.27001822365753,
+      "actions_requiring_clip": 93
+    },
+    {
+      "seed": 12024,
+      "steps": 73,
+      "success": true,
+      "return": 271.57521917806395,
+      "actions_requiring_clip": 42
+    },
+    {
+      "seed": 12025,
+      "steps": 87,
+      "success": true,
+      "return": 288.07046154862184,
+      "actions_requiring_clip": 56
+    },
+    {
+      "seed": 12026,
+      "steps": 79,
+      "success": true,
+      "return": 282.63708049019425,
+      "actions_requiring_clip": 42
+    },
+    {
+      "seed": 12027,
+      "steps": 85,
+      "success": true,
+      "return": 307.835534569254,
+      "actions_requiring_clip": 67
+    },
+    {
+      "seed": 12028,
+      "steps": 76,
+      "success": true,
+      "return": 280.80053809227354,
+      "actions_requiring_clip": 34
+    },
+    {
+      "seed": 12029,
+      "steps": 75,
+      "success": true,
+      "return": 272.6606408804161,
+      "actions_requiring_clip": 41
+    }
+  ],
+  "success_rate": 0.9333333333333333,
+  "top_k": 5,
+  "sampling_seed": 30000,
+  "sampling_rng": "NumPy PCG64 inverse CDF; differs from Torch multinomial RNG",
+  "horizon": 8,
+  "max_steps": 150,
+  "policy_weights_sha256": "39e80ba596f76ca630fb9c6060eb8293845953f219192310072b1f22ef0de410",
+  "tokenizer_weights_sha256": "7d9091522441076da0df94c71247dff856cb93e2909b1226ff741b57e615869a",
+  "median_decision_ms": 32.08237420767546,
+  "p95_decision_ms": 45.58701300993562,
+  "performance_scope": "includes host transfer/cold start, excludes rendering; not standardized benchmark",
+  "elapsed_seconds": 29.997573599219322,
+  "created_utc": "2026-10-29T03:46:10.973800+00:00",
+  "torch_imported": false,
+  "limitations": [
+    "single task, small-data protocol",
+    "not paper benchmark equivalence"
+  ]
+}

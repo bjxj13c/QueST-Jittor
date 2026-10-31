@@ -1,0 +1,6 @@
+{
+  "step": 9000,
+  "validation_ce": 3.079918357464528,
+  "autoregressive_valid_mae": 0.17855134395305203,
+  "autoregressive_accuracy": 0.20427648413510746
+}

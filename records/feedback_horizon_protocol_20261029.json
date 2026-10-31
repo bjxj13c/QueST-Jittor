@@ -1,0 +1,51 @@
+{
+  "objective": "development ablation of execution feedback interval with frozen five-task QueST policies;no retraining",
+  "tasks": [
+    "reach-v2",
+    "reach-wall-v2",
+    "push-v2",
+    "door-open-v2",
+    "window-open-v2"
+  ],
+  "frameworks": [
+    "torch",
+    "jittor"
+  ],
+  "horizons": [
+    8,
+    4,
+    16
+  ],
+  "predicted_chunk_length": 32,
+  "baseline_horizon": 8,
+  "dataset_sha256": "c899d5923933b57a8957fe20a48554756987f8ab72ae772f8b2adb1f3454fab9",
+  "seed_start": 14000,
+  "episodes_per_task": 20,
+  "max_steps": 150,
+  "top_k": 5,
+  "sampling_seed": 30000,
+  "per_episode_sampling": true,
+  "weights": {
+    "torch": {
+      "npz_sha256": "8d76d60e69cf8b3ccc56f37ee6718b3ac77c07f438290e8dfbc7ef37fed214db"
+    },
+    "jittor": {
+      "npz_sha256": "39e80ba596f76ca630fb9c6060eb8293845953f219192310072b1f22ef0de410"
+    }
+  },
+  "tokenizer_npz_sha256": "7d9091522441076da0df94c71247dff856cb93e2909b1226ff741b57e615869a",
+  "same_across_conditions": [
+    "weights",
+    "initial scenario seeds",
+    "top5 sampling algorithm",
+    "per-episode random seed",
+    "max150controlsteps",
+    "success criterion",
+    "camera and observation contract"
+  ],
+  "expected_tradeoff": "horizon4morefrequentfeedbackandmorepolicycalls;horizon16fewerpolicycallsbutlongeropenloop;noassumptionofimprovement",
+  "statistics": "paired stratified-by-task bootstrap95%CI,5000resamples,seed321000;singletrainedcheckpoint/framework",
+  "time_limit_hours": 3,
+  "server_shutdown": false,
+  "selection_and_scope": "newdevelopment scenes,not new independent finalbenchmark;reportall30configtask combinations,do notselecton consumed12000..12029;no model/data changes"
+}

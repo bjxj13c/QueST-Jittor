@@ -1,0 +1,13 @@
+* text=auto eol=lf
+*.png binary
+*.pdf binary
+*.mp4 binary
+*.npz binary
+*.pt binary
+*.hdf5 binary
+# Preserve the exact raw-log bytes referenced by SHA256 manifests.
+reports/runs/** -text -whitespace
+licenses/** -whitespace
+records/gpu_day1.txt -whitespace
+records/reach_split_v1.json -text
+records/reach_train_statistics_v1.json -text

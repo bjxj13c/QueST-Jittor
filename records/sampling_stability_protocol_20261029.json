@@ -1,0 +1,51 @@
+{
+  "registered_utc": "2026-10-29T11:05:39.680657+00:00",
+  "objective": "check repeatability of task-balanced sampling with paired independent training initializations and frozen fresh evaluation scenes",
+  "training_seeds": [
+    310500,
+    310501,
+    310502
+  ],
+  "reuse_seed_310500": "existing validation-selected original uniform and balanced checkpoints;no retraining",
+  "new_runs": "2seeds x2samplingconditions x2frameworks=8trainings",
+  "tasks": [
+    "reach-v2",
+    "reach-wall-v2",
+    "push-v2",
+    "door-open-v2",
+    "window-open-v2"
+  ],
+  "dataset_sha256": "c899d5923933b57a8957fe20a48554756987f8ab72ae772f8b2adb1f3454fab9",
+  "tokenizer_sha256": "7d9091522441076da0df94c71247dff856cb93e2909b1226ff741b57e615869a",
+  "updates": 12000,
+  "batch_size": 16,
+  "lr": 0.0001,
+  "weight_decay": 0.0001,
+  "dropout": 0,
+  "shift": 0,
+  "backbone": "random initialization;RGB/255;no pretrainedvision",
+  "pairing": "sameinitialNPZ/taskdata/tokenizer/hyperparameters acrossconditions and frameworks;sampling order differs by condition",
+  "balanced_schedule_seed": "training_seed+10000",
+  "evaluation": {
+    "scene_seeds": [
+      16000,
+      16029
+    ],
+    "episodes_per_task": 30,
+    "total_rollouts": 1800,
+    "action_horizon": 8,
+    "top_k": 5,
+    "sampling_seed": 50000,
+    "max_steps": 150
+  },
+  "selection": "validation CE only;freeze all12checkpoints before new rollouts;no tuning on these outcomes",
+  "primary_statistics": "paired success-rate difference for each trainingseed/framework;mean, sampleSD, approximate df2 t95 interval;trainingseed is statisticalunit",
+  "stability_criterion": "report positive across all3seeds AND lower paired-seed t95 interval>0 as supporting evidence;otherwise not enough evidence;report all negative outcomes",
+  "limitations": [
+    "3trainingseeds only;approximate tinterval assumes roughly normal differences",
+    "fixedtokenizer and datasetsplit;not total end-to-end variability",
+    "5task subset;not full45taskbenchmark"
+  ],
+  "concurrency": "one stability training alongside existing vision workflow;no extra server rental or automaticshutdown",
+  "time_limit_hours": 5
+}

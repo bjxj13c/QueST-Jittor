@@ -1,0 +1,15 @@
+{
+  "status": "completed",
+  "framework": "jittor",
+  "updates": 12000,
+  "seen_examples": 192000,
+  "best_validation_ce": 3.098897184783873,
+  "best_step": 7000,
+  "batch_stream_sha256": "98585b507a137a36a4eecdaa2b9274b0d388ca8310154581b2f8fa2114a6afdb",
+  "preclip_gradient_norm_max": 10.227387428283691,
+  "preclip_gradient_norm_p95": 5.3745897769927975,
+  "gradient_clip_fraction": 0.0,
+  "nonfinite_loss_or_gradient": false,
+  "elapsed_seconds": 922.7312676869333,
+  "torch_imported": false
+}

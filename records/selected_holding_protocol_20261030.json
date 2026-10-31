@@ -1,0 +1,67 @@
+{
+  "registered_utc": "2026-10-29T16:47:39.356910+00:00",
+  "objective": "automatically follow complete12cell activation grid with paired true-holding fine-tuning of top3plusbaseline",
+  "selection": "top3bymeanPyTorch/Jittor5task development success;tiebreakminimumframeworksuccess,meanvalidreconstructionMAE,name;alwaysaddMish+GELU",
+  "selection_requires": "complete audited12cellgrid,not a subset",
+  "max_selected_combinations": 4,
+  "max_concurrent_units": 4,
+  "arms": [
+    "repeat",
+    "holding"
+  ],
+  "tasks": [
+    "reach-v2",
+    "reach-wall-v2",
+    "push-v2",
+    "door-open-v2",
+    "window-open-v2"
+  ],
+  "dataset": "samefour nonReach tasks andmemberships;Reachreplacedwithsame90newtrain20valprefixesorpaired60stepexpertcontinuation",
+  "storage": "HDF5 external links to existing immutable data;linkcontainer and all external source hashes verified",
+  "initializations": "per selected combination native learned tokenizer and policy;identicalwarmstart acrossarms AND frameworks",
+  "tokenizer_updates": 2000,
+  "tokenizer_eval_every": 500,
+  "policy_updates": 4000,
+  "policy_eval_every": 1000,
+  "batch_size": 16,
+  "seed": 530500,
+  "lr": 0.0001,
+  "min_lr": 1e-05,
+  "weight_decay": 0.0001,
+  "dropout": 0,
+  "shift": 0,
+  "tokenizer_selection": "validation allposition MAE",
+  "policy_selection": "validation CE;freeze before new scenes",
+  "evaluation": {
+    "scene_seeds": [
+      120000,
+      120029
+    ],
+    "episodes_per_task": 30,
+    "frameworks": [
+      "torch",
+      "jittor"
+    ],
+    "standard_max_steps": 150,
+    "holding_diagnostic": "Reach only;continue learned actions60stepsafterfirstsuccess;max210;no oracle-stop",
+    "action_horizon": 8,
+    "top_k": 5,
+    "sampling_seed": 130000,
+    "rollouts_per_unit": 360,
+    "maximum_rollouts": 2880
+  },
+  "scope": "singlefine-tuningseed,selectedhyperparameters,warmstartnotfromscratch;newpairedscenes;notstablegainproof",
+  "no_09am_stop": true,
+  "server_shutdown": false,
+  "additional_rentals": false,
+  "scripts": [
+    "prepare_selected_holding.py",
+    "evaluate_selected_holding.py",
+    "run_selected_holding.py",
+    "run_activation_grid.py",
+    "run_activation_variant.py",
+    "train_activation_tokenizer.py",
+    "train_activation_policy.py",
+    "activation_grid_probe.py"
+  ]
+}

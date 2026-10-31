@@ -1,0 +1,1 @@
+{"step": 4, "train_ce": 7.035589575767517, "validation_ce": 7.016592699283221, "autoregressive_valid_mae": 0.4968579980676198, "autoregressive_accuracy": 0.002542860798362334, "lr": 2.3180194846605367e-05, "grad_norm_max_interval": 2.7589569091796875, "elapsed_seconds": 21.24555634893477}

@@ -1,0 +1,5 @@
+{"seed": 2000, "steps": 33, "success": true, "return": 188.27290436263286, "actions_requiring_clip": 7}
+{"seed": 2001, "steps": 150, "success": false, "return": 910.0497802381832, "actions_requiring_clip": 6}
+{"seed": 2002, "steps": 150, "success": false, "return": 1117.423681374725, "actions_requiring_clip": 5}
+{"seed": 2003, "steps": 56, "success": true, "return": 367.39689451461516, "actions_requiring_clip": 12}
+{"seed": 2004, "steps": 150, "success": false, "return": 1270.901326915402, "actions_requiring_clip": 13}

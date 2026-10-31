@@ -1,0 +1,96 @@
+{
+  "registered_utc": "2026-10-29T16:05:13.605702+00:00",
+  "objective": "full4x3temporal-convolution/Transformer-FFN activation factorial",
+  "cases": [
+    "mish_gelu",
+    "mish_silu",
+    "mish_relu",
+    "silu_gelu",
+    "silu_silu",
+    "silu_relu",
+    "gelu_gelu",
+    "gelu_silu",
+    "gelu_relu",
+    "relu_gelu",
+    "relu_silu",
+    "relu_relu"
+  ],
+  "conv_activations": [
+    "mish",
+    "silu",
+    "gelu",
+    "relu"
+  ],
+  "ffn_activations": [
+    "gelu",
+    "silu",
+    "relu"
+  ],
+  "baseline": "mish_gelu",
+  "transformer_scope": "sameFFNactivationin tokenizer encoder/decoder and policyTransformer",
+  "unchanged": [
+    "ResNetReLU",
+    "FSQbound/tanh/rounding",
+    "attention",
+    "architecturewidths/layers",
+    "originalallpositionreconstructionL1",
+    "RGB/255",
+    "450train100validationepisode split"
+  ],
+  "tasks": [
+    "reach-v2",
+    "reach-wall-v2",
+    "push-v2",
+    "door-open-v2",
+    "window-open-v2"
+  ],
+  "dataset_sha256": "c899d5923933b57a8957fe20a48554756987f8ab72ae772f8b2adb1f3454fab9",
+  "seed": 520500,
+  "initialization": "freshsharedTorchCPUtokenizerseed520500,policyseed520501;identicalNPZpercell/framework;not pretrained Mish/GELU adaptation",
+  "tokenizer_updates": 22180,
+  "tokenizer_eval_every": 2218,
+  "tokenizer_budget_note": "approximately10completepasses of35487trainingwindows with continuousfull16minibatches;identicalexactupdatebudget",
+  "policy_updates": 12000,
+  "policy_eval_every": 1000,
+  "batch_size": 16,
+  "lr": 0.0001,
+  "min_lr": 1e-05,
+  "weight_decay": 0.0001,
+  "dropout": 0,
+  "shift": 0,
+  "sampling": "uniformtrainingwindows,samecontinuousshuffledstreamacrosscases/frameworks",
+  "selection": {
+    "tokenizer": "validation allpositionMAE",
+    "policy": "validationtokenCE;freeze before onlineeval"
+  },
+  "tokenizer_policy_pairing": "eachcelltrainsbothframeworktokenizers;cellnativebestsharedwithpairedpoliciesviastaticexport;canonicaltokenlabelsregeneratedineachcell",
+  "evaluation": {
+    "scene_seeds": [
+      100000,
+      100029
+    ],
+    "episodes_per_task": 30,
+    "total_rollouts": 3600,
+    "max_steps": 150,
+    "action_horizon": 8,
+    "top_k": 5,
+    "sampling_seed": 110000
+  },
+  "scheduling": "waitforprotectedpaddingworkflowtoterminatebeforeGPUwork;max4gridworkers;freeVRAM>=6144MiB/freeDisk>=3GiB;no additionalrental;no changes to currentjob",
+  "failure_policy": "preservefailedcell/logs,continueothercells,reportpartialresultswithoutdroppingfailures",
+  "timing": "contendedtrainwalltimesrecorded;isolatedpostgridbenchmarks10warmup50repeats,tokenizerB16/policygreedyB1,synchronizedhosttransferincluded",
+  "scope": "singletrainingseed,fivetasksmallscale,notfull45taskbenchmark;factorstatisticsdescriptive;multiplecomparisons,winnerrequiresfreshconfirmation",
+  "scripts": [
+    "run_activation_variant.py",
+    "train_activation_tokenizer.py",
+    "train_activation_policy.py",
+    "activation_grid_assets.py",
+    "activation_grid_probe.py",
+    "benchmark_activation_case.py",
+    "run_activation_grid.py"
+  ],
+  "server_shutdown": false,
+  "scheduling_limit_hours": 36,
+  "completion_target_local": "2026-10-30 09:00 Asia/Shanghai is a soft target,NOT a stop deadline;user explicitly allows continuing unfinished jobs",
+  "max_workers": 4
+}

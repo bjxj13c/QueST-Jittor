@@ -1,0 +1,60 @@
+{
+  "status": "passed",
+  "videos": [
+    {
+      "video": "reach-v2__learned_jittor__seed12000__720p.mp4",
+      "decoded_frames": 85,
+      "success_step_verified": true
+    },
+    {
+      "video": "reach-v2__scripted_expert__seed12000__720p.mp4",
+      "decoded_frames": 68,
+      "success_step_verified": true
+    },
+    {
+      "video": "reach-wall-v2__learned_jittor__seed12000__720p.mp4",
+      "decoded_frames": 69,
+      "success_step_verified": true
+    },
+    {
+      "video": "reach-wall-v2__scripted_expert__seed12000__720p.mp4",
+      "decoded_frames": 71,
+      "success_step_verified": true
+    },
+    {
+      "video": "push-v2__learned_jittor__seed12001__720p.mp4",
+      "decoded_frames": 92,
+      "success_step_verified": true
+    },
+    {
+      "video": "push-v2__scripted_expert__seed12001__720p.mp4",
+      "decoded_frames": 87,
+      "success_step_verified": true
+    },
+    {
+      "video": "door-open-v2__learned_jittor__seed12000__720p.mp4",
+      "decoded_frames": 97,
+      "success_step_verified": true
+    },
+    {
+      "video": "door-open-v2__scripted_expert__seed12000__720p.mp4",
+      "decoded_frames": 139,
+      "success_step_verified": true
+    },
+    {
+      "video": "window-open-v2__learned_jittor__seed12000__720p.mp4",
+      "decoded_frames": 104,
+      "success_step_verified": true
+    },
+    {
+      "video": "window-open-v2__scripted_expert__seed12000__720p.mp4",
+      "decoded_frames": 108,
+      "success_step_verified": true
+    }
+  ],
+  "all_ten_decodable_720p": true,
+  "all_success_records_verified": true,
+  "learned_saved_actions_exact": true,
+  "same_scene_pairs": true,
+  "scope": "Windows illustrative replay; original Linux benchmark unchanged; reward discrepancies retained"
+}

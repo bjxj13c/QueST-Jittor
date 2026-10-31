@@ -1,0 +1,36 @@
+{
+  "tasks": [
+    "reach-v2",
+    "reach-wall-v2",
+    "push-v2",
+    "door-open-v2",
+    "window-open-v2"
+  ],
+  "dataset_sha256": "c899d5923933b57a8957fe20a48554756987f8ab72ae772f8b2adb1f3454fab9",
+  "plan_sha256": "ecb774f14c6513afcf0591173522d738c1a879e6e77318cc7fecde08815360b5",
+  "model_seed": 310500,
+  "registered_utc": "2026-10-29T10:27:29.310156+00:00",
+  "conditions": [
+    "random_normalized",
+    "imagenet_finetune"
+  ],
+  "pretrained_initial_sha256": "74e3c31a12eb777039bea1ff596182709d81bcf8c376880379a3d42bb742288e",
+  "original_initial_sha256": "dd2ed97c10423fec1df283b0f9d5764598a3a444873f1b347fc08387a3d3f9df",
+  "batch_stream_sha256": "23aee1d13c5d8e4ee2dd5b975af460c18f17676892fb65d806c5ecc49d5579f8",
+  "updates": 12000,
+  "batch_size": 16,
+  "lr": 0.0001,
+  "weight_decay": 0.0001,
+  "dropout": 0,
+  "shift": 0,
+  "action_horizon": 8,
+  "normalization": "both conditions RGB/255 then ImageNet mean/std",
+  "selection": "validation CE only;freeze before development rollouts",
+  "evaluation": "matched14000..14019/task;top5;150steps;development only",
+  "scope": "partial ResNet18 stem/layer1/layer2;all layers finetuned;not original QueST baseline;no language capability",
+  "queue": "wait for completed sampling workflow and idle GPU;no auto shutdown",
+  "limitations": [
+    "one training seed",
+    "same previously used development scenes;fresh final test required"
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "status": "passed",
+  "actual_rollouts": 1800,
+  "training_seeds": [
+    560500,
+    560600,
+    560700
+  ],
+  "all_raw_records_and_fixtures_checked": true,
+  "original_strict_tolerances_preserved": true,
+  "initializations_batches_budgets_verified": true,
+  "downloaded_policy_hashes_verified": true,
+  "paired_seed_statistics_verified": {
+    "torch": {
+      "paired_seed_deltas": [
+        0.0,
+        0.04,
+        0.02
+      ],
+      "mean_delta": 0.02,
+      "paired_seed_t95_df2": [
+        -0.02968275423674487,
+        0.06968275423674487
+      ]
+    },
+    "jittor": {
+      "paired_seed_deltas": [
+        0.10666666666666667,
+        0.02666666666666667,
+        -0.07333333333333333
+      ],
+      "mean_delta": 0.02,
+      "paired_seed_t95_df2": [
+        -0.20403194726160245,
+        0.24403194726160243
+      ]
+    }
+  },
+  "no_model_execution_or_training": true
+}

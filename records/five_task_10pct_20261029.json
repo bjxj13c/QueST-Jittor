@@ -1,0 +1,16 @@
+{
+  "objective": "Use 450 actual training demonstrations,10% of the author's 4500 MetaWorld pretraining demonstrations,in a shared five-task QueST reproduction",
+  "tasks": ["reach-v2", "reach-wall-v2", "push-v2", "door-open-v2", "window-open-v2"],
+  "train_per_task": 90,
+  "validation_per_task": 20,
+  "reuse": "Preserve previous three-task80train20validation membership; collect10additional train trajectories/task and100trajectories for each new task,split80/20bygoal",
+  "collection_seeds": {"new_two": 310001, "additional_ten": 310002},
+  "all_failures_retained": true,
+  "split_seed": 310090,
+  "tokenizer": {"frameworks": ["torch", "jittor"], "epochs": 10, "batch_size": 16, "dropout": 0, "seed": 310300, "initialization": "same old native tokenizer NPZ; paired adaptation,not from scratch", "policy_uses": "native best validation reconstruction checkpoint frozen for BOTH policies"},
+  "policy": {"frameworks": ["torch", "jittor"], "updates": 12000, "eval_every": 1000, "batch_size": 16, "lr": 0.0001, "weight_decay": 0.0001, "dropout": 0, "shift": 0, "seed": 310500, "initialization": "same seed456shared weights,task0row preserved and4new seeded rows", "checkpoint_selection": "lowest validationCE before held-out tests"},
+  "test": {"seed_start": 12000, "episodes_per_task": 30, "top_k": 5, "sampling_seed": 30000, "per_episode_sampling": true, "action_horizon": 8, "max_steps": 150, "commitment": "no post-test tuning; audit goal isolation from all known datasets first"},
+  "time_limit_hours": 6,
+  "server_shutdown": false,
+  "scope": "10% refers to trajectory count,not10%paper completion;five chosen tasks,no45-task or few-shot benchmark claim;one training seed;all prior test sets consumed"
+}

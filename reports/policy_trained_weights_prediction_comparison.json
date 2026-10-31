@@ -1,0 +1,64 @@
+{
+  "passed": true,
+  "atol": 2e-05,
+  "rtol": 0.0002,
+  "missing_fields": [],
+  "extra_fields": [],
+  "fields": {
+    "actions": {
+      "passed": true,
+      "reference_shape": [
+        12,
+        32,
+        4
+      ],
+      "candidate_shape": [
+        12,
+        32,
+        4
+      ],
+      "reference_dtype": "float32",
+      "candidate_dtype": "float32",
+      "integer_exact": false,
+      "finite": true,
+      "max_absolute_error": 5.364418029785156e-07,
+      "mean_absolute_error": 1.1164380945653345e-07
+    },
+    "context": {
+      "passed": true,
+      "reference_shape": [
+        12,
+        2,
+        384
+      ],
+      "candidate_shape": [
+        12,
+        2,
+        384
+      ],
+      "reference_dtype": "float32",
+      "candidate_dtype": "float32",
+      "integer_exact": false,
+      "finite": true,
+      "max_absolute_error": 6.854534149169922e-07,
+      "mean_absolute_error": 7.058153844102182e-08
+    },
+    "tokens": {
+      "passed": true,
+      "reference_shape": [
+        12,
+        8
+      ],
+      "candidate_shape": [
+        12,
+        8
+      ],
+      "reference_dtype": "int64",
+      "candidate_dtype": "int32",
+      "integer_exact": true,
+      "finite": true,
+      "max_absolute_error": 0.0,
+      "mean_absolute_error": 0.0
+    }
+  }
+}

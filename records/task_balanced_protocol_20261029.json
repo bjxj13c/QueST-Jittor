@@ -1,0 +1,44 @@
+{
+  "registered_utc": "2026-10-29T10:05:14.433452+00:00",
+  "objective": "isolate task-balanced window sampling with unchanged450train data,tokenizer,architecture and compute budget",
+  "tasks": [
+    "reach-v2",
+    "reach-wall-v2",
+    "push-v2",
+    "door-open-v2",
+    "window-open-v2"
+  ],
+  "updates": 12000,
+  "eval_every": 1000,
+  "batch_size": 16,
+  "lr": 0.0001,
+  "dropout": 0,
+  "weight_decay": 0.0001,
+  "shift": 0,
+  "model_seed": 310500,
+  "plan_sha256": "ecb774f14c6513afcf0591173522d738c1a879e6e77318cc7fecde08815360b5",
+  "dataset_sha256": "c899d5923933b57a8957fe20a48554756987f8ab72ae772f8b2adb1f3454fab9",
+  "initial_sha256": "dd2ed97c10423fec1df283b0f9d5764598a3a444873f1b347fc08387a3d3f9df",
+  "tokenizer_npz_sha256": "7d9091522441076da0df94c71247dff856cb93e2909b1226ff741b57e615869a",
+  "sampling": "task-balanced20%each;all450episodes/all35487windowscovered;within-task shuffledstreams;no filtering/relabeling",
+  "control": "previousfive-taskuniform-windowpolicies,unchanged12000updates/sameinitialweights;usealreadycompletedfeedback_h8evaluationsonmatcheddevelopmentseeds",
+  "test": {
+    "seed_start": 14000,
+    "episodes_per_task": 20,
+    "horizon": 8,
+    "top_k": 5,
+    "sampling_seed": 30000,
+    "max_steps": 150,
+    "per_episode_sampling": true
+  },
+  "selection": "checkpointbyvalidationCEonly;horizon8fixedbeforeinspectingfeedbackoutcomes;developmentresultsnotindependentfinalbenchmark",
+  "invariants": [
+    "no changes to original trainers/models/data/testresults",
+    "samebatchplanacrossframeworks",
+    "nativeJittornoTorch",
+    "allnegativeoutcomespreserved",
+    "no automatic shutdown"
+  ],
+  "time_limit_hours": 3,
+  "server_shutdown": false
+}

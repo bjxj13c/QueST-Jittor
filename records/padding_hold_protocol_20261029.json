@@ -1,0 +1,73 @@
+{
+  "registered_utc": "2026-10-29T15:22:46.918673+00:00",
+  "objective": "last scoped Reach study:padding loss and real post-success expert holding",
+  "conditions": [
+    "repeat",
+    "masked",
+    "holding"
+  ],
+  "definitions": {
+    "repeat": "pairedprefix ends on firstsuccess,repeat-last padding,allposition reconstruction L1",
+    "masked": "sameexactprefixes/repeated inputs;reconstruction L1 valid positions only;policy token CE unchanged",
+    "holding": "sameprefix plus60actual expert-control steps;repeat-last padding,allpositionL1"
+  },
+  "collection": {
+    "train_episodes": 90,
+    "validation_episodes": 20,
+    "seeds": [
+      60000,
+      60109
+    ],
+    "expert_noise_std": 0.1,
+    "max_steps_to_first_success": 150,
+    "post_success_steps": 60,
+    "failed_demonstrations": "kept unchanged",
+    "policy_inputs": "RGB128x128 +8Dstate +taskID0;39Dstate expert only"
+  },
+  "tokenizer": {
+    "initial": "existing common native tokenizer adapted2000updates per condition/framework",
+    "updates": 2000,
+    "batch_size": 16,
+    "selection": "validation valid-position MAE"
+  },
+  "policy": {
+    "initial_seed": 510500,
+    "same_initial_weights_across_conditions_frameworks": true,
+    "updates": 6000,
+    "batch_size": 16,
+    "lr": 0.0001,
+    "weight_decay": 0.0001,
+    "dropout": 0,
+    "shift": 0,
+    "selection": "validation CE only"
+  },
+  "evaluation": {
+    "seeds": [
+      80000,
+      80029
+    ],
+    "standard_episodes_per_model": 30,
+    "standard": "unchanged official-success evaluation at max150steps;stop at firstsuccess",
+    "diagnostic": "continue learned actions60steps after first true success without clearing pending actions;search150steps;max210",
+    "total_rollouts": 360,
+    "action_horizon": 8,
+    "top_k": 5,
+    "sampling_seed": 90000,
+    "metrics": [
+      "standard_success_rate",
+      "hold_all60_unconditional",
+      "post_success_fraction_conditional",
+      "TCPdrift_after60steps_conditional"
+    ],
+    "all_checkpoints_frozen_before_testing": true
+  },
+  "limitations": [
+    "single training seed",
+    "Reach only;newpaired dataset not comparable to5task scores",
+    "masking reconstruction does not remove padded encoder inputs or policy targets",
+    "holding data quantity/distribution changes;fixedupdate budget only",
+    "not a proven explanation for earlier seed0drift"
+  ],
+  "no_automatic_shutdown": true,
+  "time_limit_hours": 5
+}

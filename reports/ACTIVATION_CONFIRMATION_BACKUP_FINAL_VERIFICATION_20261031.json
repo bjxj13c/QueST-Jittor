@@ -1,0 +1,7 @@
+{
+  "status": "passed",
+  "immutable_files": 72,
+  "bytes_sha_verified": 1645818902,
+  "hierarchical_bootstrap_independently_recomputed": true,
+  "reported_reconstruction_and_policy_selection_verified": true
+}

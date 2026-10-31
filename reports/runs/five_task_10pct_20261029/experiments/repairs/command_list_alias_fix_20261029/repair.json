@@ -1,0 +1,13 @@
+{
+  "utc": "2026-10-29T03:09:08.599566+00:00",
+  "reason": "Copy NATIVE command prefix before +=;previous alias polluted later commands",
+  "old_runner_sha256": "3ce8fcfa7fdbd1f2acef8c1c0f565222ea2c39654b185fde5648a66c31356053",
+  "new_runner_sha256": "c57cc096eecf343af43a863062446878b2aece69a69611004608f8e413b263ae",
+  "trained_weight_hashes_unchanged": {
+    "outputs/five_task_10pct_20261029/dataset/outputs/five_tokenizer_torch/best.pt": "36bb70bf0867af029bd54d2f775f2ec8829272ff2b32d73ca1c08ff0ebcaa278",
+    "outputs/five_task_10pct_20261029/dataset/outputs/five_tokenizer_torch/best_validation.json": "0d6c3b93714b6cca5b3f1fd9be8c339fb558203178678db7e620beb03f8a1648",
+    "outputs/five_task_10pct_20261029/dataset/outputs/five_tokenizer_jittor/best_weights.npz": "7d9091522441076da0df94c71247dff856cb93e2909b1226ff741b57e615869a",
+    "outputs/five_task_10pct_20261029/dataset/outputs/five_tokenizer_jittor/best_validation.json": "5146d9f9242e460ba547132408a510cae3c6b6771ed446b8988e0933ba0c4c26"
+  },
+  "no_test_outcomes_seen": true
+}

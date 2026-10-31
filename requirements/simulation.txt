@@ -1,0 +1,9 @@
+gymnasium==0.29.1
+mujoco==2.3.7
+imageio==2.36.0
+imageio-ffmpeg==0.6.0
+scipy==1.13.1
+PyOpenGL==3.1.7
+glfw==2.7.0
+absl-py==2.1.0
+metaworld @ git+https://github.com/Farama-Foundation/Metaworld.git@c822f28f582ba1ad49eb5dcf61016566f28003ba

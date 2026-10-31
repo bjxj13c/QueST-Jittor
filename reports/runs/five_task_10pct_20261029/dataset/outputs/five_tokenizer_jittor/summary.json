@@ -1,0 +1,22 @@
+{
+  "status": "complete",
+  "initial_validation": {
+    "mae_all": 0.4138369431319849,
+    "mae_valid": 0.43192596768147984,
+    "unique_codes": 260
+  },
+  "final": {
+    "epoch": 10,
+    "step": 22180,
+    "train_mae": 0.11063754385226536,
+    "validation_mae": 0.11165739932565158,
+    "validation_valid_mae": 0.12968099406315717,
+    "unique_codes": 983,
+    "learning_rate": 1.2202456766718093e-05,
+    "elapsed_seconds": 635.7037391830236
+  },
+  "best_validation_mae": 0.11165739932565158,
+  "elapsed_seconds": 639.1368526499718,
+  "torch_imported": false,
+  "scope": "single-task tokenizer training; no policy success implied"
+}

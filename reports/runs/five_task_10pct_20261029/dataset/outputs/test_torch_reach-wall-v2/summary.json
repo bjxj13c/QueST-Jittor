@@ -1,0 +1,282 @@
+{
+  "scope": "learned-policy closed-loop evaluation",
+  "framework": "torch",
+  "device": "cuda",
+  "environment": "reach-wall-v2-goal-observable",
+  "task_id": 1,
+  "per_episode_sampling": true,
+  "torch": "2.2.0+cu121",
+  "platform": "Linux-5.15.0-94-generic-x86_64-with-glibc2.35",
+  "mujoco": "2.3.7",
+  "metaworld": "2.0.0",
+  "seed_set": "experiment",
+  "seeds": [
+    12000,
+    12001,
+    12002,
+    12003,
+    12004,
+    12005,
+    12006,
+    12007,
+    12008,
+    12009,
+    12010,
+    12011,
+    12012,
+    12013,
+    12014,
+    12015,
+    12016,
+    12017,
+    12018,
+    12019,
+    12020,
+    12021,
+    12022,
+    12023,
+    12024,
+    12025,
+    12026,
+    12027,
+    12028,
+    12029
+  ],
+  "episodes": [
+    {
+      "seed": 12000,
+      "steps": 51,
+      "success": true,
+      "return": 259.2097216801302,
+      "actions_requiring_clip": 15
+    },
+    {
+      "seed": 12001,
+      "steps": 50,
+      "success": true,
+      "return": 285.13003743847275,
+      "actions_requiring_clip": 12
+    },
+    {
+      "seed": 12002,
+      "steps": 46,
+      "success": true,
+      "return": 232.32597616241696,
+      "actions_requiring_clip": 4
+    },
+    {
+      "seed": 12003,
+      "steps": 48,
+      "success": true,
+      "return": 293.5037054636819,
+      "actions_requiring_clip": 13
+    },
+    {
+      "seed": 12004,
+      "steps": 48,
+      "success": true,
+      "return": 299.8406343733083,
+      "actions_requiring_clip": 9
+    },
+    {
+      "seed": 12005,
+      "steps": 49,
+      "success": true,
+      "return": 252.10740326710211,
+      "actions_requiring_clip": 14
+    },
+    {
+      "seed": 12006,
+      "steps": 41,
+      "success": true,
+      "return": 247.62032924034867,
+      "actions_requiring_clip": 16
+    },
+    {
+      "seed": 12007,
+      "steps": 111,
+      "success": true,
+      "return": 906.5950756625023,
+      "actions_requiring_clip": 11
+    },
+    {
+      "seed": 12008,
+      "steps": 49,
+      "success": true,
+      "return": 233.25511425208836,
+      "actions_requiring_clip": 11
+    },
+    {
+      "seed": 12009,
+      "steps": 36,
+      "success": true,
+      "return": 198.30841600852403,
+      "actions_requiring_clip": 9
+    },
+    {
+      "seed": 12010,
+      "steps": 150,
+      "success": false,
+      "return": 1274.2807651409573,
+      "actions_requiring_clip": 15
+    },
+    {
+      "seed": 12011,
+      "steps": 41,
+      "success": true,
+      "return": 195.15108794874916,
+      "actions_requiring_clip": 14
+    },
+    {
+      "seed": 12012,
+      "steps": 54,
+      "success": true,
+      "return": 293.6232669435398,
+      "actions_requiring_clip": 4
+    },
+    {
+      "seed": 12013,
+      "steps": 47,
+      "success": true,
+      "return": 289.0962213857736,
+      "actions_requiring_clip": 12
+    },
+    {
+      "seed": 12014,
+      "steps": 150,
+      "success": false,
+      "return": 1230.0781679029892,
+      "actions_requiring_clip": 10
+    },
+    {
+      "seed": 12015,
+      "steps": 43,
+      "success": true,
+      "return": 262.8112494019498,
+      "actions_requiring_clip": 14
+    },
+    {
+      "seed": 12016,
+      "steps": 86,
+      "success": true,
+      "return": 650.6424207600948,
+      "actions_requiring_clip": 12
+    },
+    {
+      "seed": 12017,
+      "steps": 43,
+      "success": true,
+      "return": 280.11089037395,
+      "actions_requiring_clip": 13
+    },
+    {
+      "seed": 12018,
+      "steps": 54,
+      "success": true,
+      "return": 311.11834548537684,
+      "actions_requiring_clip": 11
+    },
+    {
+      "seed": 12019,
+      "steps": 45,
+      "success": true,
+      "return": 243.18239980838104,
+      "actions_requiring_clip": 12
+    },
+    {
+      "seed": 12020,
+      "steps": 40,
+      "success": true,
+      "return": 214.95974642515273,
+      "actions_requiring_clip": 9
+    },
+    {
+      "seed": 12021,
+      "steps": 46,
+      "success": true,
+      "return": 273.66190141930093,
+      "actions_requiring_clip": 13
+    },
+    {
+      "seed": 12022,
+      "steps": 47,
+      "success": true,
+      "return": 274.99119426897414,
+      "actions_requiring_clip": 8
+    },
+    {
+      "seed": 12023,
+      "steps": 47,
+      "success": true,
+      "return": 224.2459559537875,
+      "actions_requiring_clip": 15
+    },
+    {
+      "seed": 12024,
+      "steps": 150,
+      "success": false,
+      "return": 1248.2666509286616,
+      "actions_requiring_clip": 13
+    },
+    {
+      "seed": 12025,
+      "steps": 51,
+      "success": true,
+      "return": 258.0474488831312,
+      "actions_requiring_clip": 13
+    },
+    {
+      "seed": 12026,
+      "steps": 49,
+      "success": true,
+      "return": 231.09316291176322,
+      "actions_requiring_clip": 12
+    },
+    {
+      "seed": 12027,
+      "steps": 48,
+      "success": true,
+      "return": 233.57440124511163,
+      "actions_requiring_clip": 19
+    },
+    {
+      "seed": 12028,
+      "steps": 48,
+      "success": true,
+      "return": 235.97448688729492,
+      "actions_requiring_clip": 5
+    },
+    {
+      "seed": 12029,
+      "steps": 43,
+      "success": true,
+      "return": 256.5221217827914,
+      "actions_requiring_clip": 13
+    }
+  ],
+  "success_rate": 0.9,
+  "horizon": 8,
+  "success_rate_wilson_95_interval": [
+    0.7437891742081593,
+    0.9654001112526658
+  ],
+  "observation_ablation": "none",
+  "top_k": 5,
+  "sampling_seed": 30000,
+  "sampling_backend": "numpy",
+  "max_steps": 150,
+  "policy_sha256": "5194a308b8a813db3cdfb2ff8ca6872d3daf844a3e5c9c149a507e382b27b77f",
+  "tokenizer_sha256": "9fc336a1dcdf82673cc57aad6eea498d122cacba37b7515fe1df78111dc7b273",
+  "median_decision_ms": 24.890394881367683,
+  "p95_decision_ms": 27.7588902041316,
+  "performance_scope": "includes host transfer; first JIT/BLAS warmup not excluded; excludes rendering",
+  "elapsed_seconds": 20.595325402915478,
+  "created_utc": "2026-10-29T03:42:20.309007+00:00",
+  "limitations": [
+    "single reach task",
+    "small demonstration dataset",
+    "not paper benchmark equivalence",
+    "greedy top-1 default differs from official stochastic top-5",
+    "development seeds may be used for debugging; final seeds are reserved"
+  ]
+}

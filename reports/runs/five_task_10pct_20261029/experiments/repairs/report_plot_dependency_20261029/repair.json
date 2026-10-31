@@ -1,0 +1,6 @@
+{
+  "reason": "Report plotting dependency missing after all tests completed",
+  "matplotlib": "3.9.4",
+  "model_data_code_changes": false,
+  "training_testing_rerun": false
+}

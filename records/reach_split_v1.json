@@ -1,0 +1,82 @@
+{
+  "dataset": "data/reach_30_v1.hdf5",
+  "sha256": "d01056529e3e2c54a1d0ead694b4292f64c2e06bbfe9413051dcae2a1021c638",
+  "split_seed": 20261027,
+  "chunk_length": 32,
+  "stride": 1,
+  "padding": "repeat final action within the same episode",
+  "pad_mask": "true for recorded actions; false for padding; diagnostic until loss choice is fixed",
+  "train": [
+    "demo_18",
+    "demo_11",
+    "demo_25",
+    "demo_20",
+    "demo_26",
+    "demo_21",
+    "demo_17",
+    "demo_27",
+    "demo_10",
+    "demo_14",
+    "demo_6",
+    "demo_1",
+    "demo_29",
+    "demo_22",
+    "demo_0",
+    "demo_9",
+    "demo_24",
+    "demo_3",
+    "demo_15",
+    "demo_5",
+    "demo_4",
+    "demo_23",
+    "demo_19",
+    "demo_28"
+  ],
+  "validation": [
+    "demo_7",
+    "demo_13",
+    "demo_8",
+    "demo_12",
+    "demo_16",
+    "demo_2"
+  ],
+  "collection": {
+    "env_name": "reach-v2-goal-observable",
+    "camera": "corner2",
+    "camera_position_override_index": 2,
+    "camera_position_override": [
+      0.75,
+      0.075,
+      0.7
+    ],
+    "image_vertical_flip": true,
+    "rgb_size": [
+      128,
+      128
+    ],
+    "expert_noise_std": 0.0,
+    "termination": "first success, environment termination/truncation, or 150 steps"
+  },
+  "evaluation_seeds_reserved": [
+    1000,
+    1001,
+    1002,
+    1003,
+    1004,
+    1005,
+    1006,
+    1007,
+    1008,
+    1009,
+    1010,
+    1011,
+    1012,
+    1013,
+    1014,
+    1015,
+    1016,
+    1017,
+    1018,
+    1019
+  ]
+}

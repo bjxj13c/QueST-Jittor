@@ -1,0 +1,15 @@
+{
+  "status": "completed",
+  "framework": "torch",
+  "updates": 12000,
+  "seen_examples": 192000,
+  "best_validation_ce": 3.079918357464528,
+  "best_step": 9000,
+  "batch_stream_sha256": "98585b507a137a36a4eecdaa2b9274b0d388ca8310154581b2f8fa2114a6afdb",
+  "preclip_gradient_norm_max": 7.610910892486572,
+  "preclip_gradient_norm_p95": 5.3290127277374255,
+  "gradient_clip_fraction": 0.0,
+  "nonfinite_loss_or_gradient": false,
+  "elapsed_seconds": 782.7409813664854,
+  "torch_imported": true
+}

@@ -1,0 +1,22 @@
+{
+  "status": "complete",
+  "kind": "small-data tokenizer training; not online policy evaluation",
+  "epochs_completed": 10,
+  "partial_epoch": false,
+  "steps": 22180,
+  "initial_validation_mae": 0.41383695128081155,
+  "best_validation_mae": 0.11131605648739738,
+  "final_validation_mae": 0.11131605648739738,
+  "zero_action_baseline_mae": 0.46474836019373966,
+  "train_mean_action_baseline_mae": 0.40786168525260447,
+  "forward_ms_per_batch": 5.491884239017963,
+  "performance_batch_size": 16,
+  "elapsed_seconds": 1233.6609166897833,
+  "gpu_peak_allocated_bytes": 154193920,
+  "limitations": [
+    "single reach task, 550 expert demonstrations",
+    "no learned-policy success rate",
+    "no Jittor alignment implied",
+    "partial-epoch checkpoints cannot exactly resume a shuffled epoch"
+  ]
+}

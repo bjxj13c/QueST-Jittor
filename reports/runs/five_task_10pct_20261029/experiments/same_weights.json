@@ -1,0 +1,12 @@
+{
+  "context": {
+    "max_abs": 1.1771917343139648e-06
+  },
+  "tokens": {
+    "max_abs": 0.0
+  },
+  "actions": {
+    "max_abs": 1.8417835235595703e-05
+  },
+  "tokens_exact": true
+}

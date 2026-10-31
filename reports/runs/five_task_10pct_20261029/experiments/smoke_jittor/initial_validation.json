@@ -1,0 +1,5 @@
+{
+  "validation_ce": 7.0809357485971285,
+  "autoregressive_valid_mae": 0.5117343990489498,
+  "autoregressive_accuracy": 0.0013274053224155578
+}
